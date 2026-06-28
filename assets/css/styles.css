@@ -1,1 +1,291 @@
+/* =====================================================================
+   Sylvias mobile Kurse – Stylesheet
+   Farbwelt: warm, rustikal, einladend (Terrakotta, Olive, Creme)
+   Alle Farben sind als Variablen definiert – oben anpassen reicht.
+   Optimiert für alle gängigen Browser (inkl. Safari/iOS) und Geräte.
+   ===================================================================== */
 
+:root {
+  --terracotta: #c2613b;
+  --terracotta-dark: #a44e2d;
+  --olive: #5b6b3f;
+  --olive-dark: #46532f;
+  --cream: #faf4e9;
+  --cream-2: #f3e9d6;
+  --ink: #33291f;
+  --muted: #6f6356;
+  --white: #ffffff;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(51, 41, 31, 0.10);
+  --max: 1120px;
+  --font-head: "Fraunces", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+  font-size: 18px;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+input, select, textarea, button { font-family: inherit; font-size: inherit; }
+
+/* verhindert horizontales Scrollen auf kleinen Geräten */
+main, section, .container { max-width: 100%; }
+
+a { color: var(--terracotta-dark); }
+
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+.center { text-align: center; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn--primary { background: var(--terracotta); color: #fff; }
+.btn--primary:hover { background: var(--terracotta-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
+
+/* =====================================================================
+   KOPFZEILE / NAVIGATION
+   ===================================================================== */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--cream);
+  box-shadow: 0 2px 12px rgba(51,41,31,.06);
+}
+.topbar { background: var(--olive); color: #fff; font-size: .85rem; }
+.topbar__inner { display: flex; gap: 24px; justify-content: flex-end; padding: 7px 22px; flex-wrap: wrap; }
+.topbar__contact { color: #fff; text-decoration: none; opacity: .92; }
+.topbar__contact:hover { opacity: 1; text-decoration: underline; }
+
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; }
+.nav__logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.nav__logo-img { height: 66px; width: auto; display: block; }
+.nav__logo-mark { font-size: 1.9rem; }
+.nav__logo-text { font-family: var(--font-head); font-size: 1rem; line-height: 1.05; }
+.nav__logo-text strong { font-size: 1.25rem; color: var(--terracotta); }
+
+.nav__links { list-style: none; display: flex; gap: 26px; margin: 0; padding: 0; align-items: center; }
+.nav__links a { text-decoration: none; color: var(--ink); font-weight: 600; }
+.nav__links a:hover { color: var(--terracotta); }
+.nav__cta { background: var(--terracotta); color: #fff !important; padding: 9px 20px; border-radius: 999px; }
+.nav__cta:hover { background: var(--terracotta-dark); }
+
+.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
+.nav__toggle span { width: 26px; height: 3px; background: var(--ink); border-radius: 3px; transition: .25s; }
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero {
+  background:
+    linear-gradient(rgba(91,107,63,.74), rgba(51,41,31,.80)),
+    url("../img/Familie%20Mauermaier-48.jpg") center 25%/cover no-repeat,
+    var(--olive-dark);
+  color: #fff;
+  padding: 96px 0 104px;
+  text-align: center;
+}
+.hero__eyebrow { text-transform: uppercase; letter-spacing: .22em; font-weight: 700; font-size: .8rem; opacity: .9; margin: 0 0 12px; }
+.hero__title { font-family: var(--font-head); font-weight: 700; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; margin: 0 0 20px; }
+.hero__title em { color: #ffd9a8; font-style: italic; }
+.hero__text { max-width: 640px; margin: 0 auto 30px; font-size: 1.12rem; opacity: .96; }
+.hero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero__badges { list-style: none; display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; margin: 38px 0 0; padding: 0; font-weight: 600; font-size: .98rem; }
+
+/* =====================================================================
+   ABSCHNITTE (allgemein)
+   ===================================================================== */
+.section { padding: 84px 0; }
+.section--cream { background: var(--cream-2); }
+.section--green { background: var(--olive); }
+
+.section__eyebrow { text-transform: uppercase; letter-spacing: .2em; font-weight: 700; font-size: .8rem; color: var(--terracotta); text-align: center; margin: 0 0 10px; }
+.section__eyebrow--light { color: #ffd9a8; }
+.section__title { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.8rem); text-align: center; margin: 0 0 18px; line-height: 1.1; }
+.section__title--light { color: #fff; }
+.section__lead { text-align: center; max-width: 640px; margin: 0 auto 48px; color: var(--muted); }
+
+/* ---------- Angebots-Karten ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 12px; }
+.card { background: var(--white); border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow); border: 1px solid rgba(51,41,31,.05); transition: transform .18s ease; }
+.card:hover { transform: translateY(-6px); }
+.card__emoji { font-size: 2.6rem; margin-bottom: 8px; }
+.card__title { font-family: var(--font-head); font-size: 1.4rem; margin: 0 0 4px; }
+.card__tag { text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; font-weight: 700; color: var(--terracotta); margin: 0 0 14px; }
+.card__meta { margin-top: 16px; font-size: .92rem; color: var(--muted); border-top: 1px dashed rgba(51,41,31,.2); padding-top: 12px; }
+
+/* ---------- Ablauf-Schritte ---------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; }
+.step { text-align: center; padding: 12px; }
+.step__num { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: var(--terracotta); color: #fff; font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; }
+.step h3 { font-family: var(--font-head); font-size: 1.25rem; margin: 0 0 8px; }
+.step p { color: var(--muted); margin: 0; }
+
+/* ---------- Preise ---------- */
+.price-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: start; }
+.included { list-style: none; margin: 0; padding: 0; }
+.included li { color: #fff; padding: 11px 0 11px 34px; position: relative; border-bottom: 1px solid rgba(255,255,255,.18); font-size: 1.05rem; }
+.included li::before { content: "\2713"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #ffd9a8; color: var(--olive-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
+.price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pricecard { background: var(--cream); border-radius: var(--radius); padding: 22px; text-align: center; }
+.pricecard h3 { font-family: var(--font-head); margin: 0 0 6px; font-size: 1.15rem; }
+.pricecard__price { font-family: var(--font-head); font-size: 1.9rem; font-weight: 700; color: var(--terracotta); margin: 0; }
+.pricecard__sub { color: var(--muted); font-size: .85rem; margin: 4px 0 0; }
+.pricecard--accent { background: #ffd9a8; }
+.price-note { color: #fff; text-align: center; max-width: 680px; margin: 32px auto 28px; opacity: .92; }
+
+/* ---------- Über mich ---------- */
+.about { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center; }
+.about__img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); display: block; object-fit: cover; }
+.about__photo-placeholder { aspect-ratio: 4/5; background: var(--white); border: 2px dashed var(--terracotta); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; text-align: center; color: var(--muted); font-size: 2.4rem; line-height: 1.4; }
+.about__photo-placeholder small { font-size: .8rem; }
+.about__text .section__eyebrow, .about__text .section__title { text-align: left; }
+.about__sig { font-family: var(--font-head); font-style: italic; font-size: 1.3rem; color: var(--terracotta); }
+
+/* ---------- Kundenstimmen ---------- */
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.quote { background: var(--white); border-radius: var(--radius); padding: 28px; margin: 0; box-shadow: var(--shadow); border-left: 5px solid var(--terracotta); }
+.quote p { margin: 0 0 14px; font-style: italic; }
+.quote cite { color: var(--muted); font-style: normal; font-weight: 700; font-size: .9rem; }
+
+/* ---------- Kontakt ---------- */
+.contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+.contact__info .section__eyebrow, .contact__info .section__title { text-align: left; }
+.contact__list { list-style: none; padding: 0; margin: 24px 0; }
+.contact__list li { padding: 8px 0; }
+.contact__social { display: flex; gap: 16px; }
+.contact__social a { font-weight: 700; }
+
+.contact__form { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-weight: 700; font-size: .9rem; margin-bottom: 6px; }
+.field input, .field select, .field textarea { width: 100%; padding: 12px 14px; border: 1.5px solid #ddd2bf; border-radius: 10px; font-family: var(--font-body); font-size: 1rem; background: var(--cream); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--terracotta); }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: .85rem; color: var(--muted); margin: 8px 0 18px; }
+.consent input { margin-top: 4px; }
+.form-status { margin: 14px 0 0; font-weight: 700; }
+.form-status.ok { color: var(--olive); }
+.form-status.err { color: var(--terracotta-dark); }
+
+/* Honeypot – für Menschen unsichtbar, fängt Bots */
+.hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+
+/* =====================================================================
+   FUSSZEILE
+   ===================================================================== */
+.footer { background: var(--ink); color: #e9ddca; padding: 50px 0 24px; }
+.footer__inner { display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: flex-start; }
+.footer__logo { height: 92px; width: auto; display: block; filter: invert(1) brightness(1.6); margin-bottom: 6px; }
+.footer__brand strong { display: block; font-family: var(--font-head); font-size: 1.2rem; color: #fff; }
+.footer__brand p { margin: 6px 0 0; opacity: .8; font-size: .9rem; }
+.footer__links, .footer__legal { display: flex; flex-direction: column; gap: 8px; }
+.footer a { color: #e9ddca; text-decoration: none; }
+.footer a:hover { color: #fff; text-decoration: underline; }
+.footer__copy { text-align: center; margin: 36px 0 0; font-size: .82rem; opacity: .65; border-top: 1px solid rgba(255,255,255,.12); padding-top: 20px; }
+
+/* =====================================================================
+   MOBILE / RESPONSIVE
+   ===================================================================== */
+
+/* Nav braucht position:relative damit das mobile Dropdown korrekt sitzt */
+.nav { position: relative; }
+
+/* Tablet / iPad: Angebotskarten in 2 Spalten, etwas mehr Rand */
+@media (min-width: 861px) and (max-width: 1100px) {
+  .container { padding: 0 32px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .price-grid, .about, .contact { grid-template-columns: 1fr; }
+  .about__photo { max-width: 380px; margin: 0 auto; }
+  .about__text .section__eyebrow, .about__text .section__title { text-align: center; }
+  .contact__info .section__eyebrow, .contact__info .section__title { text-align: center; }
+  .contact__info { text-align: center; }
+  .contact__social { justify-content: center; }
+
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; align-items: stretch;
+    background: var(--cream); box-shadow: var(--shadow);
+    max-height: 0; overflow: hidden; transition: max-height .35s ease;
+    z-index: 100;
+  }
+  .nav__links.open { max-height: 480px; }
+  .nav__links li { border-top: 1px solid rgba(51,41,31,.08); }
+  .nav__links a { display: block; padding: 16px 24px; }
+  .nav__cta { border-radius: 0; margin: 0; display: block; text-align: center; }
+
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .container { padding: 0 18px; }
+  .section { padding: 56px 0; }
+  .price-cards { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .topbar__inner { justify-content: center; gap: 12px; font-size: .78rem; }
+  .hero { padding: 64px 0 72px; }
+  .hero__title { font-size: clamp(2rem, 8vw, 2.8rem); }
+  .hero__text { font-size: 1rem; }
+  .hero__badges { gap: 12px; font-size: .88rem; }
+  .nav__logo-img { height: 50px; }
+  .nav { padding: 10px 18px; }
+  .section__title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .footer__inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  .footer__links, .footer__legal { align-items: center; }
+  .footer__logo { margin: 0 auto 6px; }
+  .contact__form { padding: 22px 18px; }
+  .quote { padding: 22px 20px; }
+  .card { padding: 24px 20px; }
+}
+
+/* Sehr kleine Geräte (iPhone SE etc.) */
+@media (max-width: 380px) {
+  body { font-size: 15px; }
+  .container { padding: 0 14px; }
+  .hero__title { font-size: 1.8rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { text-align: center; }
+  .hero__badges { flex-direction: column; align-items: center; gap: 8px; }
+  .topbar__inner { flex-direction: column; align-items: center; gap: 4px; }
+}
+
+/* Telefon im Querformat: Hero kompakter */
+@media (orientation: landscape) and (max-height: 540px) {
+  .hero { padding: 56px 0 48px; }
+}
