@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#c2613b" />
+
+  <!-- ====== Seitentitel & Beschreibung (für Google & Social Media) ====== -->
+  <title>Sylvias mobile Kurse – Kochen & Backen, das zu dir kommt</title>
+  <meta name="description" content="Sylvias mobile Kurse: Koch- und Backevents für Groß und Klein – direkt bei dir zuhause oder an deinem Wunschort. Kochen mit Freude, Genuss mit Herz." />
+
+  <!-- ====== Social-Media-Vorschau (Open Graph) ====== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sylvias mobile Kurse" />
+  <meta property="og:description" content="Koch- und Backevents, die zu dir kommen. Für Groß und Klein, an deinem Wunschort." />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:image" content="assets/img/Familie%20Mauermaier-47.jpg" />
+
+  <!-- ====== Sicherheit: Content-Security-Policy per Meta-Tag ======
+       (Auf GitHub Pages können keine echten Security-Header gesetzt werden,
+        deshalb hier per Meta-Tag. Siehe README für die volle Absicherung via Cloudflare.) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; form-action https://api.web3forms.com https://formspree.io; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; object-src 'none'" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- ====== Favicon (Platzhalter – eigenes Logo in assets/img/ ablegen) ====== -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- ====== Schriftarten ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================ KOPFZEILE / NAVIGATION ============================ -->
+  <header class="site-header" id="top">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__contact" href="tel:+490000000000">📱 Mobil: 0000 / 000 000</a>
+        <a class="topbar__contact" href="mailto:info@sylvias-mobile-kurse.de">✉️ info@sylvias-mobile-kurse.de</a>
+      </div>
+    </div>
+
+    <nav class="nav container" aria-label="Hauptnavigation">
+      <a href="#top" class="nav__logo">
+        <img src="assets/img/Logo1.png" alt="Sylvias mobile Kurse" class="nav__logo-img" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#willkommen">Willkommen</a></li>
+        <li><a href="#angebot">Angebot</a></li>
+        <li><a href="#preise">Kurse &amp; Preise</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#uebermich">Über mich</a></li>
+        <li><a href="#kontakt" class="nav__cta">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="willkommen">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Herzlich Willkommen</p>
+        <h1 class="hero__title">Kochen &amp; Backen,<br>das zu <em>dir</em> kommt</h1>
+        <p class="hero__text">
+          Sylvias mobile Kurse bringen das Kocherlebnis direkt zu dir – nach Hause,
+          ins Büro oder an deinen Lieblingsort. Ob Familie, Freundesrunde oder Team:
+          Gemeinsam kochen, lachen und genießen wir. Du brauchst nur eine Küche und
+          gute Laune – um den Rest kümmere ich mich.
+        </p>
+        <div class="hero__actions">
+          <a href="#preise" class="btn btn--primary">Kurse entdecken</a>
+          <a href="#kontakt" class="btn btn--ghost">Termin anfragen</a>
+        </div>
+        <ul class="hero__badges">
+          <li>🚐 Ich komme zu dir</li>
+          <li>👨‍👩‍👧 Für Groß &amp; Klein</li>
+          <li>❤️ Mit Herz &amp; Genuss</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ ANGEBOT ============================ -->
+    <section class="section section--cream" id="angebot">
+      <div class="container">
+        <p class="section__eyebrow">Meine Angebote</p>
+        <h2 class="section__title">Koch- &amp; Backkurse</h2>
+        <p class="section__lead">
+          Jeder Kurs kommt mobil zu dir. Wähle, was zu dir passt – oder frag einfach
+          nach deinem Wunschthema.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__emoji">🍝</div>
+            <h3 class="card__title">Kochevents</h3>
+            <p class="card__tag">Für Erwachsene</p>
+            <p>Kochen, lachen, genießen. Ideal für Freundesrunden, Teams oder alle,
+               die Lust auf einen geselligen Abend mit gutem Essen haben.</p>
+            <p class="card__meta"><strong>Dauer:</strong> 3 Stunden · <strong>ab</strong> 57,– €</p>
+          </article>
+
+          <article class="card">
+            <div class="card__emoji">🧁</div>
+            <h3 class="card__title">Kinderkurse</h3>
+            <p class="card__tag">Für Kinder ab 5 Jahre</p>
+            <p>Schürze um und los geht's! Gemeinsam kochen oder backen wir leckere
+               Sachen, probieren Neues und haben dabei jede Menge Spaß.</p>
+            <p class="card__meta"><strong>Dauer:</strong> 2,5–3 Stunden · <strong>ab</strong> 57,– €</p>
+          </article>
+
+          <article class="card">
+            <div class="card__emoji">🥐</div>
+            <h3 class="card__title">Backseminare</h3>
+            <p class="card__tag">Für Erwachsene</p>
+            <p>Backen wie ein Profi – mit den richtigen Tipps, Tricks und Techniken
+               wird's zum Kinderspiel. Gemeinsamer Backspaß inklusive.</p>
+            <p class="card__meta"><strong>Dauer:</strong> 4 Stunden · <strong>ab</strong> 82,– €</p>
+          </article>
+
+          <article class="card">
+            <div class="card__emoji">🎉</div>
+            <h3 class="card__title">Geburtstage</h3>
+            <p class="card__tag">Für Kinder &amp; Teenies</p>
+            <p>Die Geburtstagsparty der besonderen Art – koche oder backe zusammen
+               mit deinen Freunden bei dir zuhause.</p>
+            <p class="card__meta"><strong>Dauer:</strong> 2 Stunden · <strong>ab</strong> 270 €</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ABLAUF ============================ -->
+    <section class="section" id="ablauf">
+      <div class="container">
+        <p class="section__eyebrow">Kochen &amp; Genießen</p>
+        <h2 class="section__title">So läuft ein Kurs ab</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">1</span>
+            <h3>Ankommen</h3>
+            <p>Begrüßung mit einem hausgemachten Aperitif oder einer Tasse Kaffee.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">2</span>
+            <h3>Gemeinsam kochen</h3>
+            <p>Wir kochen eine Vielzahl an Rezepten – mit professioneller Begleitung.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">3</span>
+            <h3>Zusammen genießen</h3>
+            <p>In geselliger Runde wird anschließend alles gemeinsam probiert.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">4</span>
+            <h3>Zuhause nachkochen</h3>
+            <p>Alle Rezepte gibt's zum Mitnehmen – für den Genuss daheim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PREISE & LEISTUNGEN ============================ -->
+    <section class="section section--green" id="preise">
+      <div class="container">
+        <p class="section__eyebrow section__eyebrow--light">Preise &amp; Leistungen</p>
+        <h2 class="section__title section__title--light">Im Kurs enthalten</h2>
+
+        <div class="price-grid">
+          <div class="price-list">
+            <ul class="included">
+              <li>Leihschürze</li>
+              <li>Willkommens-Kaffee oder Aperitif</li>
+              <li>Getränke (alkoholfrei)</li>
+              <li>Alle Lebensmittelkosten</li>
+              <li>Rezepte per Mail zum Download</li>
+              <li>Ein Event, das in Erinnerung bleibt</li>
+            </ul>
+          </div>
+
+          <div class="price-cards">
+            <div class="pricecard">
+              <h3>Kochevent</h3>
+              <p class="pricecard__price">57,– €</p>
+              <p class="pricecard__sub">pro Person · 3 Std.</p>
+            </div>
+            <div class="pricecard">
+              <h3>Kinderkurs</h3>
+              <p class="pricecard__price">57,– €</p>
+              <p class="pricecard__sub">pro Kind · 2,5–3 Std.</p>
+            </div>
+            <div class="pricecard">
+              <h3>Backseminar</h3>
+              <p class="pricecard__price">82,– €</p>
+              <p class="pricecard__sub">pro Person · 4 Std.</p>
+            </div>
+            <div class="pricecard pricecard--accent">
+              <h3>Kindergeburtstag</h3>
+              <p class="pricecard__price">270 €</p>
+              <p class="pricecard__sub">5–8 Kinder · 2 Std.</p>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          Mobiler Service: Anfahrt im Umkreis inklusive – darüber hinaus auf Anfrage.
+          Exklusive Events ab 8 Personen jederzeit buchbar.
+        </p>
+        <div class="center">
+          <a href="#kontakt" class="btn btn--primary">Jetzt Termin anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ÜBER MICH ============================ -->
+    <section class="section section--cream" id="uebermich">
+      <div class="container about">
+        <div class="about__photo">
+          <img src="assets/img/Familie%20Mauermaier-47.jpg" alt="Sylvia – Sylvias mobile Kurse" class="about__img" />
+        </div>
+        <div class="about__text">
+          <p class="section__eyebrow">Über mich</p>
+          <h2 class="section__title">Hallo, ich bin Sylvia</h2>
+          <p>
+            Kochen und Backen ist meine Leidenschaft – und die gebe ich am liebsten
+            an andere weiter. Mit meinen mobilen Kursen komme ich direkt zu dir und
+            bringe alles mit, was wir für ein gelungenes Kocherlebnis brauchen.
+          </p>
+          <p>
+            Ob Familienküche, Freundesrunde oder Teamevent: In entspannter Atmosphäre
+            entstehen kulinarische Schmankerl, die wir anschließend gemeinsam genießen.
+            Besonders am Herzen liegen mir die Kurse für Kinder – hier verbinde ich
+            Freude am Kochen mit wertvollen Erfahrungen fürs Leben.
+          </p>
+          <p class="about__sig">— Sylvia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ KUNDENSTIMMEN ============================ -->
+    <section class="section" id="stimmen">
+      <div class="container">
+        <p class="section__eyebrow">Ehrliche Meinungen</p>
+        <h2 class="section__title">Kundenstimmen</h2>
+
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>„Ein wunderbarer, lehrreicher und vor allem unterhaltsamer Abend.
+               Ich empfehle Sylvia auf jeden Fall weiter!"</p>
+            <cite>— Platzhalter-Stimme</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p>„Man merkt, wie viel Herzblut in allem steckt. Hat riesigen Spaß
+               gemacht und köstlich war es noch dazu."</p>
+            <cite>— Platzhalter-Stimme</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p>„Unsere Kinder haben den Kurs gefeiert! Vieles davon kochen wir
+               inzwischen regelmäßig zuhause nach."</p>
+            <cite>— Platzhalter-Stimme</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ KONTAKT / ANFRAGE ============================ -->
+    <section class="section section--cream" id="kontakt">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="section__eyebrow">Kontakt</p>
+          <h2 class="section__title">Der Weg zu dir</h2>
+          <p>Ich freue mich auf deine Anfrage und darauf, dich vielleicht bald bei
+             einem Kurs kennenzulernen.</p>
+
+          <ul class="contact__list">
+            <li><strong>📱 Mobil:</strong> <a href="tel:+490000000000">0000 / 000 000</a></li>
+            <li><strong>✉️ Mail:</strong> <a href="mailto:info@sylvias-mobile-kurse.de">info@sylvias-mobile-kurse.de</a></li>
+            <li><strong>📍 Einsatzgebiet:</strong> Region (Platzhalter) &amp; Umgebung</li>
+          </ul>
+
+          <div class="contact__social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+
+        <!-- KONTAKTFORMULAR
+             Das Formular ist vorbereitet für Web3Forms (kostenlos, 250 Anfragen/Monat).
+             Trage in der README erklärt deinen kostenlosen "access_key" ein,
+             dann landen Anfragen automatisch in deinem E-Mail-Postfach.
+             Bis dahin zeigt es eine freundliche Hinweismeldung an. -->
+        <form class="contact__form" id="kontaktForm"
+              action="https://api.web3forms.com/submit" method="POST">
+          <!-- Hier deinen kostenlosen Web3Forms-Schlüssel eintragen: -->
+          <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-KEY" />
+          <input type="hidden" name="subject" value="Neue Anfrage über Sylvias mobile Kurse" />
+          <input type="hidden" name="from_name" value="Sylvias mobile Kurse – Website" />
+
+          <!-- Honeypot gegen Spam-Bots (für Menschen unsichtbar) -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Telefon (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="field">
+            <label for="kurs">Interesse an</label>
+            <select id="kurs" name="kurs">
+              <option>Kochevent (Erwachsene)</option>
+              <option>Kinderkurs</option>
+              <option>Backseminar</option>
+              <option>Kindergeburtstag</option>
+              <option>Team-/Firmenevent</option>
+              <option>Noch unsicher – bitte beraten</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Deine Nachricht</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" required />
+            Ich bin mit der Verarbeitung meiner Daten gemäß
+            <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
+          </label>
+
+          <button type="submit" class="btn btn--primary">Anfrage senden</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FUSSZEILE ============================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/Logo1.png" alt="Sylvias mobile Kurse" class="footer__logo" />
+        <p>Kochen &amp; Backen, das zu dir kommt.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#willkommen">Willkommen</a>
+        <a href="#angebot">Angebot</a>
+        <a href="#preise">Kurse &amp; Preise</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <nav class="footer__legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Sylvias mobile Kurse · Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#c0613b" />
+  <title>Sylvias mobile Kurse – Kochen & Backen, das zu dir kommt</title>
+  <meta name="description" content="Sylvias mobile Kurse: Koch- und Backevents für Groß und Klein – direkt bei dir zuhause oder an deinem Wunschort. Kochen mit Freude, Genuss mit Herz." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sylvias mobile Kurse" />
+  <meta property="og:description" content="Koch- und Backevents, die zu dir kommen. Für Groß und Klein, an deinem Wunschort." />
+  <meta property="og:image" content="assets/img/Familie%20Mauermaier-47.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+  /* =====================================================================
+     Sylvias mobile Kurse – Premium-Redesign (eigenständige Datei)
+     Design-Prinzipien: gestaltete Hintergründe, dezente Animationen,
+     hochwertige Typografie, Tiefe & Weißraum.
+     ===================================================================== */
+
+  :root{
+    --espresso:#2a2018;
+    --ink:#3a2e23;
+    --terracotta:#c0613b;
+    --terracotta-d:#a44d2c;
+    --sage:#6a7850;
+    --sage-d:#4c5739;
+    --gold:#e0a458;
+    --cream:#fbf6ec;
+    --cream-2:#f4ead7;
+    --paper:#fffdf8;
+    --muted:#7c6f60;
+    --radius:20px;
+    --radius-s:14px;
+    --shadow-s:0 4px 14px rgba(42,32,24,.08);
+    --shadow:0 18px 50px -12px rgba(42,32,24,.22);
+    --max:1160px;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:88px;
+    -webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{
+    margin:0;font-family:var(--sans);color:var(--ink);line-height:1.7;font-size:18px;
+    overflow-x:hidden;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    background:
+      radial-gradient(1200px 600px at 80% -5%, #fdf3e2 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, #f7ecd8 0%, transparent 55%),
+      var(--cream);
+  }
+  img{max-width:100%;height:auto;display:block}
+  input,select,textarea,button{font-family:inherit;font-size:inherit}
+  /* Verhindert ungewolltes horizontales Scrollen auf kleinen Geräten */
+  main,section,.container{max-width:100%}
+  a{color:var(--terracotta-d)}
+  .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+  .center{text-align:center}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    --b:var(--terracotta);
+    display:inline-flex;align-items:center;gap:9px;
+    padding:15px 30px;border-radius:999px;font-family:var(--sans);font-weight:600;
+    font-size:1rem;text-decoration:none;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;
+  }
+  .btn--primary{background:var(--terracotta);color:#fff;box-shadow:0 10px 24px -8px rgba(192,97,59,.6)}
+  .btn--primary:hover{background:var(--terracotta-d);transform:translateY(-3px);box-shadow:0 16px 30px -8px rgba(192,97,59,.7)}
+  .btn--ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+  .btn--ghost:hover{background:#fff;color:var(--ink);transform:translateY(-3px)}
+  .btn--dark{background:var(--espresso);color:#fff}
+  .btn--dark:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+
+  /* ---------- Eyebrow / Headings ---------- */
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.28em;
+    font-weight:600;font-size:.72rem;color:var(--terracotta)}
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--terracotta);display:inline-block}
+  .eyebrow--center{justify-content:center}
+  .eyebrow--light{color:var(--gold)}
+  .eyebrow--light::before{background:var(--gold)}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+  .h-section{font-size:clamp(2rem,4.4vw,3.1rem);margin:14px 0 18px}
+  .lead{color:var(--muted);max-width:620px;margin:0 auto;font-size:1.08rem}
+
+  /* =====================================================================
+     HEADER
+     ===================================================================== */
+  .header{position:sticky;top:0;z-index:1000;transition:background .3s,box-shadow .3s,padding .3s}
+  .header.scrolled{background:rgba(251,246,236,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(42,32,24,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto}
+  .nav__logo img{height:64px;width:auto;transition:height .3s}
+  .header.scrolled .nav__logo img{height:54px}
+  .nav__links{list-style:none;display:flex;gap:30px;margin:0;padding:0;align-items:center}
+  .nav__links a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.98rem;position:relative}
+  .nav__links a:not(.nav__cta)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--terracotta);transition:width .25s}
+  .nav__links a:not(.nav__cta):hover::after{width:100%}
+  .nav__cta{background:var(--terracotta);color:#fff !important;padding:10px 22px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(192,97,59,.7)}
+  .nav__cta:hover{background:var(--terracotta-d)}
+  .nav__toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .nav__toggle span{width:26px;height:2.5px;background:var(--ink);border-radius:3px;transition:.3s}
+  .nav__toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav__toggle.open span:nth-child(2){opacity:0}
+  .nav__toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+  /* =====================================================================
+     HERO
+     ===================================================================== */
+  .hero{position:relative;min-height:600px;min-height:92vh;min-height:92svh;display:flex;align-items:center;overflow:hidden;color:#fff}
+  .hero__bg{position:absolute;inset:0;
+    background:url("assets/img/Familie%20Mauermaier-48.jpg") center 22%/cover no-repeat;
+    transform:scale(1.08);will-change:transform}
+  .hero__veil{position:absolute;inset:0;
+    background:
+      linear-gradient(105deg, rgba(42,32,24,.86) 0%, rgba(76,87,57,.66) 55%, rgba(42,32,24,.45) 100%),
+      radial-gradient(120% 90% at 15% 100%, rgba(42,32,24,.75), transparent 60%)}
+  /* feine Körnung für „teuren" Look */
+  .hero__grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero__inner{position:relative;z-index:2;max-width:760px;padding:120px 0}
+  .hero h1{font-size:clamp(2.7rem,7vw,5rem);font-weight:300;margin:18px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero h1 .grad{font-style:italic;background:linear-gradient(90deg,#ffd9a0,#e0a458);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .hero__text{font-size:1.18rem;max-width:560px;opacity:.95;margin:0 0 34px;font-weight:400}
+  .hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero__badges{list-style:none;display:flex;gap:14px;flex-wrap:wrap;margin:40px 0 0;padding:0}
+  .hero__badges li{display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:500;
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+    padding:9px 16px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .hero__scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;
+    color:rgba(255,255,255,.8);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;text-align:center}
+  .hero__scroll span{display:block;width:1.5px;height:34px;background:rgba(255,255,255,.6);margin:8px auto 0;animation:scrolldot 1.8s ease-in-out infinite}
+  @keyframes scrolldot{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* =====================================================================
+     SECTIONS
+     ===================================================================== */
+  .section{padding:104px 0;position:relative}
+  .section--tight{padding:84px 0}
+
+  /* Angebot */
+  .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;margin-top:54px}
+  .ucard{position:relative;background:var(--paper);border-radius:var(--radius);padding:34px 30px;
+    box-shadow:var(--shadow-s);border:1px solid rgba(42,32,24,.06);overflow:hidden;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+  .ucard::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--terracotta),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .ucard:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .ucard:hover::before{transform:scaleX(1)}
+  .ucard__icon{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+    font-size:1.9rem;background:linear-gradient(135deg,#fbe8d2,#f6d9b6);margin-bottom:18px}
+  .ucard h3{font-size:1.4rem;margin:0 0 4px}
+  .ucard__tag{text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;font-weight:600;color:var(--terracotta);margin:0 0 14px}
+  .ucard p{margin:0;color:var(--muted)}
+  .ucard__meta{margin-top:18px !important;padding-top:14px;border-top:1px solid rgba(42,32,24,.1);font-size:.92rem;color:var(--ink) !important;font-weight:500}
+  .ucard__meta b{color:var(--terracotta-d)}
+
+  /* Ablauf – Timeline */
+  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:54px;position:relative}
+  .timeline::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:2px;
+    background:linear-gradient(90deg,var(--terracotta),var(--gold));opacity:.4;z-index:0}
+  .tstep{position:relative;z-index:1;text-align:center}
+  .tstep__num{width:58px;height:58px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:1.5rem;color:#fff;background:var(--terracotta);
+    box-shadow:0 10px 20px -8px rgba(192,97,59,.7);border:4px solid var(--cream)}
+  .tstep h3{font-size:1.2rem;margin:0 0 6px}
+  .tstep p{margin:0;color:var(--muted);font-size:.96rem}
+
+  /* Preise */
+  .section--dark{background:
+      radial-gradient(800px 400px at 85% 0%, rgba(224,164,88,.18), transparent 60%),
+      linear-gradient(160deg,var(--sage-d),var(--espresso));color:#fff;border-radius:40px;margin:0 16px}
+  .price-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:48px}
+  .included{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .included li{position:relative;padding:12px 0 12px 40px;border-bottom:1px solid rgba(255,255,255,.14);font-size:1.05rem}
+  .included li::before{content:"✓";position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;
+    background:var(--gold);color:var(--espresso);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem}
+  .price-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .pc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-s);
+    padding:24px;text-align:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .3s,background .3s}
+  .pc:hover{transform:translateY(-5px);background:rgba(255,255,255,.12)}
+  .pc h3{font-size:1.1rem;margin:0 0 8px;color:#fff}
+  .pc__price{font-family:var(--serif);font-size:2rem;color:var(--gold);margin:0;line-height:1}
+  .pc__sub{font-size:.82rem;opacity:.8;margin:6px 0 0}
+  .pc--accent{background:linear-gradient(135deg,rgba(224,164,88,.9),rgba(192,97,59,.85));border-color:transparent}
+  .pc--accent .pc__price,.pc--accent h3,.pc--accent .pc__sub{color:#fff}
+  .price-note{text-align:center;opacity:.9;max-width:680px;margin:34px auto 26px}
+
+  /* Über mich */
+  .about{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:center}
+  .about__media{position:relative}
+  .about__media img{border-radius:var(--radius);box-shadow:var(--shadow);position:relative;z-index:1}
+  .about__media::before{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:var(--radius);
+    background:linear-gradient(135deg,var(--gold),var(--terracotta));opacity:.22;z-index:0}
+  .about__media .tagchip{position:absolute;z-index:2;bottom:-18px;left:50%;transform:translateX(-50%);
+    background:#fff;color:var(--ink);padding:12px 22px;border-radius:999px;box-shadow:var(--shadow-s);
+    font-family:var(--serif);font-style:italic;white-space:nowrap}
+  .about p{color:var(--muted)}
+  .about .sig{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--terracotta);margin-top:4px}
+
+  /* Stimmen */
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;margin-top:50px}
+  .quote{position:relative;background:var(--paper);border-radius:var(--radius);padding:34px 30px 28px;box-shadow:var(--shadow-s);border:1px solid rgba(42,32,24,.05)}
+  .quote::before{content:"\201C";position:absolute;top:6px;left:20px;font-family:var(--serif);font-size:4.5rem;color:var(--gold);opacity:.45;line-height:1}
+  .quote p{margin:18px 0 16px;font-style:italic;color:var(--ink)}
+  .quote cite{color:var(--muted);font-style:normal;font-weight:600;font-size:.9rem}
+
+  /* Kontakt */
+  .contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:start}
+  .contact__list{list-style:none;padding:0;margin:26px 0}
+  .contact__list li{padding:10px 0;border-bottom:1px solid rgba(42,32,24,.08)}
+  .contact__social{display:flex;gap:12px;margin-top:18px}
+  .contact__social a{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;
+    background:var(--paper);box-shadow:var(--shadow-s);text-decoration:none;font-size:.8rem;font-weight:700;color:var(--ink)}
+  .contact__social a:hover{background:var(--terracotta);color:#fff;transform:translateY(-3px);transition:.2s}
+  .form{background:var(--paper);padding:34px;border-radius:var(--radius);box-shadow:var(--shadow)}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1.5px solid #e6d8c0;border-radius:12px;
+    font-family:var(--sans);font-size:1rem;background:var(--cream);transition:border .2s,box-shadow .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--terracotta);box-shadow:0 0 0 4px rgba(192,97,59,.12)}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--muted);margin:6px 0 18px}
+  .consent input{margin-top:5px}
+  .form-status{margin:14px 0 0;font-weight:600}
+  .form-status.ok{color:var(--sage-d)}.form-status.err{color:var(--terracotta-d)}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+  /* Footer */
+  .footer{background:var(--espresso);color:#e7d9c4;padding:64px 0 26px;margin-top:40px}
+  .footer__inner{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:flex-start}
+  .footer__logo{height:96px;width:auto;filter:invert(1) brightness(1.7);margin-bottom:8px}
+  .footer__brand p{opacity:.8;font-size:.92rem;max-width:240px}
+  .footer__col h4{font-family:var(--serif);color:#fff;margin:0 0 14px;font-weight:500}
+  .footer__col{display:flex;flex-direction:column;gap:9px}
+  .footer a{color:#e7d9c4;text-decoration:none}
+  .footer a:hover{color:#fff}
+  .footer__copy{text-align:center;margin:44px 0 0;font-size:.8rem;opacity:.6;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
+
+  /* ---------- Scroll-Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}
+  .reveal[data-d="3"]{transition-delay:.24s}.reveal[data-d="4"]{transition-delay:.32s}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero__bg{transform:none}}
+
+  /* ---------- Nav braucht position:relative für mobiles Dropdown ---------- */
+  .nav{position:relative}
+
+  /* ---------- Responsive ---------- */
+  /* Tablet / iPad: etwas mehr Rand, Karten in 2 Spalten */
+  @media (min-width:901px) and (max-width:1100px){
+    .container{padding:0 34px}
+    .grid-cards{grid-template-columns:repeat(2,1fr)}
+  }
+  /* Telefon im Querformat: Hero nicht über die ganze Höhe */
+  @media (orientation:landscape) and (max-height:540px){
+    .hero{min-height:auto}
+    .hero__inner{padding:80px 0 60px}
+  }
+  @media (max-width:900px){
+    .price-wrap,.about,.contact{grid-template-columns:1fr;gap:38px}
+    .timeline{grid-template-columns:1fr 1fr}
+    .timeline::before{display:none}
+    .about__media{max-width:380px;margin:0 auto}
+    .about__text{text-align:center}
+    .about .eyebrow{justify-content:center}
+  }
+  @media (max-width:760px){
+    .nav__toggle{display:flex}
+    .nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;align-items:stretch;
+      background:rgba(251,246,236,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:var(--shadow);
+      max-height:0;overflow:hidden;transition:max-height .35s ease;z-index:100}
+    .nav__links.open{max-height:480px}
+    .nav__links li{border-top:1px solid rgba(42,32,24,.07)}
+    .nav__links a{display:block;padding:16px 24px}
+    .nav__cta{border-radius:0;display:block;text-align:center}
+    .section--dark{margin:0 8px;border-radius:24px}
+    .contact__info{text-align:center}
+    .contact__social{justify-content:center}
+  }
+  @media (max-width:520px){
+    body{font-size:16px}
+    .container{padding:0 16px}
+    .section{padding:64px 0}
+    .section--dark{margin:0;border-radius:0}
+    .timeline{grid-template-columns:1fr}
+    .price-cards{grid-template-columns:1fr}
+    .grid-cards{grid-template-columns:1fr}
+    .hero{min-height:auto;min-height:80vh;min-height:80svh}
+    .hero__inner{padding:90px 0 70px}
+    .hero h1{font-size:clamp(2rem,8vw,2.8rem)}
+    .hero__text{font-size:1rem}
+    .hero__badges{flex-direction:column;align-items:flex-start;gap:8px}
+    .hero__badges li{font-size:.85rem;padding:7px 14px}
+    .nav__logo img{height:48px}
+    .nav{padding:10px 16px}
+    .h-section{font-size:clamp(1.6rem,6vw,2.2rem)}
+    .lead{font-size:.98rem}
+    .footer__inner{flex-direction:column;align-items:center;text-align:center;gap:22px}
+    .footer__logo{margin:0 auto 6px}
+    .form{padding:22px 18px}
+    .quote{padding:24px 22px}
+    .ucard{padding:26px 22px}
+    .contact__info .eyebrow{justify-content:center}
+  }
+  /* Sehr kleine Geräte (iPhone SE etc.) */
+  @media (max-width:380px){
+    body{font-size:15px}
+    .container{padding:0 12px}
+    .hero h1{font-size:1.75rem}
+    .hero__actions{flex-direction:column;align-items:stretch}
+    .hero__actions .btn{text-align:center;justify-content:center}
+    .hero__badges li{font-size:.82rem}
+  }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#top" class="nav__logo"><img src="assets/img/Logo1.png" alt="Sylvias mobile Kurse" /></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#angebot">Angebot</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#uebermich">Über mich</a></li>
+        <li><a href="#kontakt" class="nav__cta">Termin anfragen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__veil"></div>
+      <div class="hero__grain"></div>
+      <div class="container">
+        <div class="hero__inner">
+          <span class="eyebrow eyebrow--light" style="color:#ffe6c4">Mobiler Koch- &amp; Backservice</span>
+          <h1>Kochen &amp; Backen,<br>das zu <span class="grad">dir</span> kommt</h1>
+          <p class="hero__text">
+            Ich bringe das Kocherlebnis direkt zu dir – nach Hause, ins Büro oder an
+            deinen Lieblingsort. Gemeinsam kochen, lachen und genießen. Du brauchst
+            nur eine Küche und gute Laune.
+          </p>
+          <div class="hero__actions">
+            <a href="#preise" class="btn btn--primary">Kurse entdecken →</a>
+            <a href="#kontakt" class="btn btn--ghost">Termin anfragen</a>
+          </div>
+          <ul class="hero__badges">
+            <li>🚐 Ich komme zu dir</li>
+            <li>👨‍👩‍👧 Für Groß &amp; Klein</li>
+            <li>❤️ Mit Herz &amp; Genuss</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero__scroll">Entdecken<span></span></div>
+    </section>
+
+    <!-- ===================== ANGEBOT ===================== -->
+    <section class="section" id="angebot">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow eyebrow--center">Meine Angebote</span>
+          <h2 class="h-section">Koch- &amp; Backkurse für jeden Anlass</h2>
+          <p class="lead">Jeder Kurs kommt mobil zu dir. Wähle, was zu dir passt – oder frag einfach nach deinem Wunschthema.</p>
+        </div>
+        <div class="grid-cards">
+          <article class="ucard reveal" data-d="1">
+            <div class="ucard__icon">🍝</div>
+            <h3>Kochevents</h3>
+            <p class="ucard__tag">Für Erwachsene</p>
+            <p>Kochen, lachen, genießen. Ideal für Freundesrunden, Teams oder einen geselligen Abend mit gutem Essen.</p>
+            <p class="ucard__meta"><b>3 Std.</b> · ab 57,– €</p>
+          </article>
+          <article class="ucard reveal" data-d="2">
+            <div class="ucard__icon">🧁</div>
+            <h3>Kinderkurse</h3>
+            <p class="ucard__tag">Ab 5 Jahre</p>
+            <p>Schürze um und los! Gemeinsam kochen oder backen wir Leckeres, probieren Neues und haben jede Menge Spaß.</p>
+            <p class="ucard__meta"><b>2,5–3 Std.</b> · ab 57,– €</p>
+          </article>
+          <article class="ucard reveal" data-d="3">
+            <div class="ucard__icon">🥐</div>
+            <h3>Backseminare</h3>
+            <p class="ucard__tag">Für Erwachsene</p>
+            <p>Backen wie ein Profi – mit den richtigen Tipps, Tricks und Techniken wird's zum Kinderspiel.</p>
+            <p class="ucard__meta"><b>4 Std.</b> · ab 82,– €</p>
+          </article>
+          <article class="ucard reveal" data-d="4">
+            <div class="ucard__icon">🎉</div>
+            <h3>Geburtstage</h3>
+            <p class="ucard__tag">Kinder &amp; Teenies</p>
+            <p>Die Geburtstagsparty der besonderen Art – koche oder backe mit deinen Freunden bei dir zuhause.</p>
+            <p class="ucard__meta"><b>2 Std.</b> · ab 270 €</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABLAUF ===================== -->
+    <section class="section section--tight" id="ablauf">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow eyebrow--center">Kochen &amp; Genießen</span>
+          <h2 class="h-section">So läuft ein Kurs ab</h2>
+        </div>
+        <div class="timeline">
+          <div class="tstep reveal" data-d="1"><div class="tstep__num">1</div><h3>Ankommen</h3><p>Begrüßung mit hausgemachtem Aperitif oder einer Tasse Kaffee.</p></div>
+          <div class="tstep reveal" data-d="2"><div class="tstep__num">2</div><h3>Gemeinsam kochen</h3><p>Wir kochen eine Vielzahl an Rezepten – mit professioneller Begleitung.</p></div>
+          <div class="tstep reveal" data-d="3"><div class="tstep__num">3</div><h3>Zusammen genießen</h3><p>In geselliger Runde wird anschließend alles gemeinsam probiert.</p></div>
+          <div class="tstep reveal" data-d="4"><div class="tstep__num">4</div><h3>Nachkochen</h3><p>Alle Rezepte gibt's zum Mitnehmen – für den Genuss daheim.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PREISE ===================== -->
+    <section class="section" id="preise">
+      <div class="section--dark">
+        <div class="container" style="padding-top:84px;padding-bottom:84px">
+          <div class="center reveal">
+            <span class="eyebrow eyebrow--center eyebrow--light">Preise &amp; Leistungen</span>
+            <h2 class="h-section" style="color:#fff">Alles inklusive – du genießt nur</h2>
+          </div>
+          <div class="price-wrap">
+            <ul class="included reveal">
+              <li>Leihschürze für jeden Gast</li>
+              <li>Willkommens-Kaffee oder Aperitif</li>
+              <li>Alle Getränke (alkoholfrei)</li>
+              <li>Sämtliche Lebensmittelkosten</li>
+              <li>Rezepte per Mail zum Download</li>
+              <li>Ein Event, das in Erinnerung bleibt</li>
+            </ul>
+            <div class="price-cards reveal" data-d="1">
+              <div class="pc"><h3>Kochevent</h3><p class="pc__price">57 €</p><p class="pc__sub">pro Person · 3 Std.</p></div>
+              <div class="pc"><h3>Kinderkurs</h3><p class="pc__price">57 €</p><p class="pc__sub">pro Kind · 2,5–3 Std.</p></div>
+              <div class="pc"><h3>Backseminar</h3><p class="pc__price">82 €</p><p class="pc__sub">pro Person · 4 Std.</p></div>
+              <div class="pc pc--accent"><h3>Kindergeburtstag</h3><p class="pc__price">270 €</p><p class="pc__sub">5–8 Kinder · 2 Std.</p></div>
+            </div>
+          </div>
+          <p class="price-note">Mobiler Service: Anfahrt im Umkreis inklusive – darüber hinaus auf Anfrage. Exklusive Events ab 8 Personen jederzeit buchbar.</p>
+          <div class="center"><a href="#kontakt" class="btn btn--primary">Jetzt Termin anfragen →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ÜBER MICH ===================== -->
+    <section class="section" id="uebermich">
+      <div class="container about">
+        <div class="about__media reveal">
+          <img src="assets/img/Familie%20Mauermaier-47.jpg" alt="Sylvia – Sylvias mobile Kurse" />
+          <span class="tagchip">Kochen mit Herz ❤️</span>
+        </div>
+        <div class="about__text reveal" data-d="1">
+          <span class="eyebrow">Über mich</span>
+          <h2 class="h-section">Hallo, ich bin Sylvia</h2>
+          <p>Kochen und Backen ist meine Leidenschaft – und die gebe ich am liebsten an andere weiter. Mit meinen mobilen Kursen komme ich direkt zu dir und bringe alles mit, was wir für ein gelungenes Kocherlebnis brauchen.</p>
+          <p>Ob Familienküche, Freundesrunde oder Teamevent: In entspannter Atmosphäre entstehen kulinarische Schmankerl, die wir anschließend gemeinsam genießen. Besonders am Herzen liegen mir die Kurse für Kinder – hier verbinde ich Freude am Kochen mit wertvollen Erfahrungen fürs Leben.</p>
+          <p class="sig">— Sylvia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STIMMEN ===================== -->
+    <section class="section section--tight" id="stimmen">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow eyebrow--center">Ehrliche Meinungen</span>
+          <h2 class="h-section">Was Gäste sagen</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal" data-d="1"><p>Ein wunderbarer, lehrreicher und vor allem unterhaltsamer Abend. Ich empfehle Sylvia auf jeden Fall weiter!</p><cite>— Platzhalter-Stimme</cite></blockquote>
+          <blockquote class="quote reveal" data-d="2"><p>Man merkt, wie viel Herzblut in allem steckt. Hat riesigen Spaß gemacht und köstlich war es noch dazu.</p><cite>— Platzhalter-Stimme</cite></blockquote>
+          <blockquote class="quote reveal" data-d="3"><p>Unsere Kinder haben den Kurs gefeiert! Vieles davon kochen wir inzwischen regelmäßig zuhause nach.</p><cite>— Platzhalter-Stimme</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="section" id="kontakt">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h2 class="h-section">Der Weg zu dir</h2>
+          <p style="color:var(--muted)">Ich freue mich auf deine Anfrage und darauf, dich vielleicht bald bei einem Kurs kennenzulernen.</p>
+          <ul class="contact__list">
+            <li><strong>📱 Mobil:</strong> <a href="tel:+490000000000">0000 / 000 000</a></li>
+            <li><strong>✉️ Mail:</strong> <a href="mailto:info@sylvias-mobile-kurse.de">info@sylvias-mobile-kurse.de</a></li>
+            <li><strong>📍 Einsatzgebiet:</strong> Region (Platzhalter) &amp; Umgebung</li>
+          </ul>
+          <div class="contact__social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a></div>
+        </div>
+
+        <form class="form reveal" data-d="1" id="kontaktForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-KEY" />
+          <input type="hidden" name="subject" value="Neue Anfrage über Sylvias mobile Kurse" />
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+          <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" required /></div>
+          <div class="field"><label for="email">E-Mail</label><input type="email" id="email" name="email" required /></div>
+          <div class="field"><label for="phone">Telefon (optional)</label><input type="tel" id="phone" name="phone" /></div>
+          <div class="field"><label for="kurs">Interesse an</label>
+            <select id="kurs" name="kurs">
+              <option>Kochevent (Erwachsene)</option><option>Kinderkurs</option><option>Backseminar</option>
+              <option>Kindergeburtstag</option><option>Team-/Firmenevent</option><option>Noch unsicher – bitte beraten</option>
+            </select>
+          </div>
+          <div class="field"><label for="message">Deine Nachricht</label><textarea id="message" name="message" rows="4" required></textarea></div>
+          <label class="consent"><input type="checkbox" required /> Ich bin mit der Verarbeitung meiner Daten gemäß <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.</label>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Anfrage senden</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/Logo1.png" alt="Sylvias mobile Kurse" class="footer__logo" />
+        <p>Kochen &amp; Backen, das zu dir kommt – mobil an deinem Wunschort.</p>
+      </div>
+      <div class="footer__col"><h4>Seite</h4>
+        <a href="#angebot">Angebot</a><a href="#ablauf">Ablauf</a><a href="#preise">Preise</a><a href="#uebermich">Über mich</a>
+      </div>
+      <div class="footer__col"><h4>Kontakt</h4>
+        <a href="tel:+490000000000">0000 / 000 000</a><a href="mailto:info@sylvias-mobile-kurse.de">info@sylvias-mobile-kurse.de</a>
+      </div>
+      <div class="footer__col"><h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Sylvias mobile Kurse · Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script>
+    // Jahr
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Header-Hintergrund beim Scrollen
+    const header = document.getElementById("header");
+    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 30);
+    onScroll(); window.addEventListener("scroll", onScroll, { passive:true });
+
+    // Sanfter Parallax im Hero
+    const heroBg = document.getElementById("heroBg");
+    if (heroBg) window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) heroBg.style.transform = `scale(1.08) translateY(${y * 0.18}px)`;
+    }, { passive:true });
+
+    // Mobiles Menü
+    const toggle = document.getElementById("navToggle");
+    const links = document.getElementById("navLinks");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      links.classList.remove("open"); toggle.classList.remove("open");
+    }));
+
+    // Scroll-Reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // Kontaktformular
+    const form = document.getElementById("kontaktForm");
+    const status = document.getElementById("formStatus");
+    const setStatus = (m,t) => { status.textContent = m; status.className = "form-status" + (t ? " "+t : ""); };
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const key = form.querySelector('input[name="access_key"]').value;
+      if (!key || key === "DEIN-WEB3FORMS-KEY") {
+        setStatus("ℹ️ Formular noch nicht aktiviert (Web3Forms-Schlüssel fehlt – siehe README). Schreib mir solange per Mail oder ruf an.", "err");
+        return;
+      }
+      setStatus("Wird gesendet …", "");
+      try {
+        const res = await fetch(form.action, { method:"POST", body:new FormData(form) });
+        const j = await res.json();
+        if (j.success) { setStatus("✅ Vielen Dank! Deine Anfrage wurde gesendet.", "ok"); form.reset(); }
+        else setStatus("⚠️ Es gab ein Problem. Bitte später erneut versuchen.", "err");
+      } catch { setStatus("⚠️ Keine Verbindung. Bitte später erneut versuchen.", "err"); }
+    });
+  </script>
+</body>
+</html>

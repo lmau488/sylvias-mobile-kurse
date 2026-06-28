@@ -1,0 +1,11 @@
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+
+# Editor-Dateien
+.vscode/
+.idea/
+
+# Logs / Temporäres
+*.log
+node_modules/
