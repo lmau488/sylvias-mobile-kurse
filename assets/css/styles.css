@@ -184,6 +184,25 @@ a { color: var(--terracotta-dark); }
 .card__tag { text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; font-weight: 700; color: var(--terracotta); margin: 0 0 14px; }
 .card__meta { margin-top: 16px; font-size: .92rem; color: var(--muted); border-top: 1px dashed rgba(51,41,31,.2); padding-top: 12px; }
 
+/* Große Karte über die volle Breite (Vereine & Gruppen) */
+.card--wide {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 34px 38px;
+  border-left: 6px solid var(--terracotta);
+}
+.card--wide .card__icon { width: 60px; height: 60px; margin: 0; }
+.card--wide__body { flex: 1; }
+.card--wide__body .card__tag { margin-bottom: 8px; }
+.card--wide__body p:last-child { margin-bottom: 0; }
+.card--wide__cta { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 780px) {
+  .card--wide { flex-direction: column; align-items: flex-start; gap: 16px; padding: 28px 24px; }
+  .card--wide__cta { align-self: stretch; text-align: center; white-space: normal; }
+}
+
 /* ---------- Galerie (Beispielbilder) ---------- */
 .gallery {
   display: grid;
