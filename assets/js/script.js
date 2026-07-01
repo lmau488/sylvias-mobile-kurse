@@ -48,6 +48,8 @@ if (form) {
       if (json.success === true || json.success === "true") {
         showStatus("Vielen Dank! Deine Anfrage wurde gesendet. Ich melde mich bald.", "ok");
         form.reset();
+      } else if (json.message && json.message.indexOf("Activation") !== -1) {
+        showStatus("Das Formular wird gerade eingerichtet. Bitte schreib mir solange direkt eine Mail oder ruf an.", "err");
       } else {
         showStatus("Es gab ein Problem. Bitte versuche es später erneut oder schreib mir direkt eine Mail.", "err");
       }
