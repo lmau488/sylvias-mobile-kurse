@@ -57,6 +57,21 @@ a { color: var(--terracotta-dark); }
 
 .center { text-align: center; }
 
+/* ---------- Icons (Inline-SVG statt Emojis) ---------- */
+.icon {
+  width: 1.05em; height: 1.05em;
+  vertical-align: -0.18em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.icon--contact { margin-right: 8px; color: var(--terracotta); vertical-align: -0.22em; }
+.card__icon {
+  width: 44px; height: 44px;
+  color: var(--terracotta);
+  margin-bottom: 12px;
+  display: block;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
@@ -91,6 +106,22 @@ a { color: var(--terracotta-dark); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; }
 .nav__logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
 .nav__logo-img { height: 66px; width: auto; display: block; }
+
+/* ---------- Logo SylviasGusto (Vektorgrafik + Wortmarke) ---------- */
+.logo-mark { width: 46px; height: 46px; flex-shrink: 0; display: block; }
+.logo-text {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: .01em;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.logo-text em { font-style: italic; color: var(--terracotta); }
+.footer__logo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.footer .logo-text { color: #e9ddca; }
+.footer .logo-text em { color: #ffd9a8; }
 .nav__logo-mark { font-size: 1.9rem; }
 .nav__logo-text { font-family: var(--font-head); font-size: 1rem; line-height: 1.05; }
 .nav__logo-text strong { font-size: 1.25rem; color: var(--terracotta); }
@@ -122,6 +153,8 @@ a { color: var(--terracotta-dark); }
 .hero__text { max-width: 640px; margin: 0 auto 30px; font-size: 1.12rem; opacity: .96; }
 .hero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .hero__badges { list-style: none; display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; margin: 38px 0 0; padding: 0; font-weight: 600; font-size: .98rem; }
+.hero__badges li { display: inline-flex; align-items: center; gap: 8px; }
+.hero__badges .icon { color: #ffd9a8; }
 
 /* =====================================================================
    ABSCHNITTE (allgemein)
@@ -156,7 +189,7 @@ a { color: var(--terracotta-dark); }
 .price-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: start; }
 .included { list-style: none; margin: 0; padding: 0; }
 .included li { color: #fff; padding: 11px 0 11px 34px; position: relative; border-bottom: 1px solid rgba(255,255,255,.18); font-size: 1.05rem; }
-.included li::before { content: "\2713"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #ffd9a8; color: var(--olive-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
+.included li::before { content: "✓"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #ffd9a8; color: var(--olive-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
 .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .pricecard { background: var(--cream); border-radius: var(--radius); padding: 22px; text-align: center; }
 .pricecard h3 { font-family: var(--font-head); margin: 0 0 6px; font-size: 1.15rem; }
@@ -172,6 +205,15 @@ a { color: var(--terracotta-dark); }
 .about__photo-placeholder small { font-size: .8rem; }
 .about__text .section__eyebrow, .about__text .section__title { text-align: left; }
 .about__sig { font-family: var(--font-head); font-style: italic; font-size: 1.3rem; color: var(--terracotta); }
+.about__quali { list-style: none; margin: 18px 0 6px; padding: 0; }
+.about__quali li { position: relative; padding: 5px 0 5px 28px; font-size: .98rem; }
+.about__quali li::before {
+  content: ""; position: absolute; left: 0; top: 11px;
+  width: 16px; height: 16px;
+  background: var(--olive);
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat;
+}
 
 /* ---------- Kundenstimmen ---------- */
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
@@ -183,7 +225,8 @@ a { color: var(--terracotta-dark); }
 .contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
 .contact__info .section__eyebrow, .contact__info .section__title { text-align: left; }
 .contact__list { list-style: none; padding: 0; margin: 24px 0; }
-.contact__list li { padding: 8px 0; }
+.contact__list li { padding: 8px 0; display: flex; align-items: baseline; gap: 6px; }
+.contact__list li strong { white-space: nowrap; }
 .contact__social { display: flex; gap: 16px; }
 .contact__social a { font-weight: 700; }
 
@@ -264,6 +307,8 @@ a { color: var(--terracotta-dark); }
   .hero__text { font-size: 1rem; }
   .hero__badges { gap: 12px; font-size: .88rem; }
   .nav__logo-img { height: 50px; }
+  .logo-mark { width: 36px; height: 36px; }
+  .logo-text { font-size: 1.25rem; }
   .nav { padding: 10px 18px; }
   .section__title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .footer__inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
