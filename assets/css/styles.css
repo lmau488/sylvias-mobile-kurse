@@ -107,21 +107,28 @@ a { color: var(--terracotta-dark); }
 .nav__logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
 .nav__logo-img { height: 66px; width: auto; display: block; }
 
-/* ---------- Logo SylviasGusto (Vektorgrafik + Wortmarke) ---------- */
-.logo-mark { width: 46px; height: 46px; flex-shrink: 0; display: block; }
-.logo-text {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.55rem;
-  letter-spacing: .01em;
-  line-height: 1;
+/* ---------- Logo SylviasGusto (Emblem + Schriftzug) ---------- */
+.logo-mark { width: 62px; height: 62px; flex-shrink: 0; display: block; color: var(--ink); }
+.logo-lockup { display: flex; flex-direction: column; line-height: 1; }
+.logo-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
   color: var(--ink);
   white-space: nowrap;
 }
-.logo-text em { font-style: italic; color: var(--terracotta); }
-.footer__logo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.footer .logo-text { color: #e9ddca; }
-.footer .logo-text em { color: #ffd9a8; }
+.logo-sub {
+  font-family: var(--font-body);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 4px 0 0 4px;
+}
+.footer__logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.footer .logo-mark { color: #e9ddca; }
+.footer .logo-script { color: #e9ddca; }
+.footer .logo-sub { color: #ffd9a8; }
 .nav__logo-mark { font-size: 1.9rem; }
 .nav__logo-text { font-family: var(--font-head); font-size: 1rem; line-height: 1.05; }
 .nav__logo-text strong { font-size: 1.25rem; color: var(--terracotta); }
@@ -307,8 +314,9 @@ a { color: var(--terracotta-dark); }
   .hero__text { font-size: 1rem; }
   .hero__badges { gap: 12px; font-size: .88rem; }
   .nav__logo-img { height: 50px; }
-  .logo-mark { width: 36px; height: 36px; }
-  .logo-text { font-size: 1.25rem; }
+  .logo-mark { width: 46px; height: 46px; }
+  .logo-script { font-size: 1.55rem; }
+  .logo-sub { font-size: .52rem; margin-top: 3px; }
   .nav { padding: 10px 18px; }
   .section__title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .footer__inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
