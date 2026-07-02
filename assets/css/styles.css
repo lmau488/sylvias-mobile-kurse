@@ -314,6 +314,20 @@ a { color: var(--terracotta-dark); }
 .contact__list { list-style: none; padding: 0; margin: 24px 0; }
 .contact__list li { padding: 8px 0; display: flex; align-items: baseline; gap: 6px; }
 .contact__list li strong { white-space: nowrap; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 26px; }
+.chip {
+  background: var(--white);
+  border: 1px solid rgba(51,41,31,.08);
+  border-radius: 999px;
+  padding: 5px 15px;
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--muted);
+  box-shadow: 0 2px 8px rgba(51,41,31,.05);
+}
+.chip--more { background: transparent; border-style: dashed; box-shadow: none; }
+@media (max-width: 860px) { .chips { justify-content: center; } }
+
 .contact__social { display: flex; gap: 16px; }
 .contact__social a { font-weight: 700; }
 
