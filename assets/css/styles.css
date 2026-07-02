@@ -89,8 +89,8 @@ a { color: var(--terracotta-dark); }
 .btn--primary:hover { background: var(--terracotta-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--ghost:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
-.hero .btn--ghost { color: #fff; border-color: #fff; background: rgba(51, 41, 31, .35); }
-.hero .btn--ghost:hover { background: #fff; color: var(--ink); }
+.hero .btn--ghost { color: var(--ink); border-color: #fff; background: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, .25); }
+.hero .btn--ghost:hover { background: var(--cream, #faf4e9); color: var(--terracotta-dark, #a04e2e); transform: translateY(-2px); }
 
 /* =====================================================================
    KOPFZEILE / NAVIGATION
