@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /impressum.html
 Disallow: /datenschutz.html
+Disallow: /index-neu.html
 
-# Sitemap: https://www.sylvias-mobile-kurse.de/sitemap.xml
+Sitemap: https://lmau488.github.io/sylvias-mobile-kurse/sitemap.xml

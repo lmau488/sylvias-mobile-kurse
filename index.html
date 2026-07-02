@@ -6,15 +6,23 @@
   <meta name="theme-color" content="#c2613b" />
 
   <!-- ====== Seitentitel & Beschreibung (für Google & Social Media) ====== -->
-  <title>SylviasGusto – Kochen & Backen, das zu dir kommt</title>
-  <meta name="description" content="SylviasGusto: Koch- und Backevents für Groß und Klein – direkt bei dir zuhause oder an deinem Wunschort. Kochen mit Freude, Genuss mit Herz." />
+  <title>SylviasGusto – Mobile Koch- & Backkurse in Wolnzach, Hallertau & Umgebung</title>
+  <meta name="description" content="Mobile Koch- und Backkurse in Wolnzach (Hallertau) und im Umkreis von 100 km – z. B. Ingolstadt, Pfaffenhofen, Freising, München, Regensburg. Kochevents, Kinderkurse, Brotback-Seminare mit Sauerteig, Kräuterkurse und Kindergeburtstage – bei dir zuhause oder in der Seminarküche." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://lmau488.github.io/sylvias-mobile-kurse/" />
 
-  <!-- ====== Social-Media-Vorschau (Open Graph) ====== -->
+  <!-- ====== Social-Media-Vorschau (Open Graph & Twitter) ====== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SylviasGusto" />
-  <meta property="og:description" content="Koch- und Backevents, die zu dir kommen. Für Groß und Klein, an deinem Wunschort." />
+  <meta property="og:site_name" content="SylviasGusto" />
+  <meta property="og:title" content="SylviasGusto – Mobile Koch- & Backkurse in Wolnzach & Umgebung" />
+  <meta property="og:description" content="Kochevents, Kinderkurse, Brotback-Seminare und Kräuterkurse – mobil bei dir zuhause oder in der Seminarküche. Wolnzach, Hallertau und Umkreis 100 km." />
+  <meta property="og:url" content="https://lmau488.github.io/sylvias-mobile-kurse/" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:image" content="assets/img/Familie%20Mauermaier-47.jpg" />
+  <meta property="og:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SylviasGusto – Mobile Koch- & Backkurse in Wolnzach & Umgebung" />
+  <meta name="twitter:description" content="Kochevents, Kinderkurse, Brotback-Seminare und Kräuterkurse – mobil bei dir oder in der Seminarküche." />
+  <meta name="twitter:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg" />
 
   <!-- ====== Sicherheit: Content-Security-Policy per Meta-Tag ======
        (Auf GitHub Pages können keine echten Security-Header gesetzt werden,
@@ -24,8 +32,66 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <!-- ====== Favicon (Platzhalter – eigenes Logo in assets/img/ ablegen) ====== -->
+  <!-- ====== Favicon ====== -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- ====== Ladezeit: Hero-Bild früh laden (Core Web Vitals / LCP) ====== -->
+  <link rel="preload" as="image" href="assets/img/Familie%20Mauermaier-48.jpg" fetchpriority="high" />
+
+  <!-- ====== Strukturierte Daten für Google (Local SEO) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SylviasGusto",
+    "description": "Mobile Koch- und Backkurse in Wolnzach (Hallertau) und im Umkreis von 100 km: Kochevents, Kinderkurse, Brotback-Seminare mit Sauerteig, Kräuterkurse und Kindergeburtstage – bei dir zuhause oder in der Seminarküche.",
+    "url": "https://lmau488.github.io/sylvias-mobile-kurse/",
+    "image": "https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg",
+    "email": "s.mauermaier@gmx.de",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wolnzach",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.6047, "longitude": 11.6276 },
+      "geoRadius": "100000"
+    },
+    "founder": { "@type": "Person", "name": "Sylvia Mauermaier", "jobTitle": "Hauswirtschaftsmeisterin, Referentin für Hauswirtschaft und Ernährung, zertifizierte Kräuterpädagogin" },
+    "sameAs": ["https://www.instagram.com/mobile_kurse/"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kochevents für Erwachsene" }, "price": "57", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kinderkochkurse ab 5 Jahren" }, "price": "57", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brotback-Seminare mit Sauerteig" }, "price": "82", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kindergeburtstage" }, "price": "270", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Vorträge für Vereine und Gruppen" } }
+    ]
+  }
+  </script>
+
+  <!-- ====== FAQ-Schema (für Google & KI-Suchergebnisse) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Wo finden die Kochkurse von SylviasGusto statt?", "acceptedAnswer": { "@type": "Answer", "text": "Mobil bei dir zuhause, im Büro oder an deinem Wunschort – im Einsatzgebiet Wolnzach (Hallertau) mit rund 100 km Umkreis, z. B. Ingolstadt, Pfaffenhofen an der Ilm, Freising, München, Regensburg oder Landshut. Alternativ in der Seminarküche in kleiner Runde mit maximal 8 Personen." } },
+      { "@type": "Question", "name": "Was brauche ich für einen mobilen Kochkurs?", "acceptedAnswer": { "@type": "Answer", "text": "Nur eine ganz normale Küche und gute Laune. Zutaten, Rezepte und Equipment bringt Sylvia mit." } },
+      { "@type": "Question", "name": "Brauche ich Vorkenntnisse?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Es werden alltagstaugliche Rezepte gemeinsam umgesetzt – verständlich erklärt und für jedes Niveau geeignet." } },
+      { "@type": "Question", "name": "Was ist im Kurspreis enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten und die Rezepte per Mail." } },
+      { "@type": "Question", "name": "Wird auch mit Sauerteig gebacken?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, in den Brotback-Seminaren werden Brot und Kleingebäck gebacken – alltagstaugliche Rezepte, auch mit Sauerteig." } },
+      { "@type": "Question", "name": "Ab welchem Alter können Kinder teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Kinderkurse ab 5 Jahren. Kindergeburtstage für 5 bis 8 Kinder, Dauer etwa 2 Stunden." } },
+      { "@type": "Question", "name": "Wie viele Personen können teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "In der Seminarküche maximal 8 Personen. Mobile Events sind ab 8 Personen exklusiv buchbar, größere Gruppen nach Absprache." } },
+      { "@type": "Question", "name": "Gibt es Kurse für Vereine?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, Kurse und Vorträge für Vereine und Gruppen – Sylvia ist unter anderem Referentin für den KDFB Diözesanverband Regensburg." } },
+      { "@type": "Question", "name": "Kostet die Anfahrt extra?", "acceptedAnswer": { "@type": "Answer", "text": "Die Anfahrt im Umkreis ist inklusive, weitere Strecken auf Anfrage." } },
+      { "@type": "Question", "name": "Können Allergien berücksichtigt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, einfach vorab Bescheid geben – die Rezepte werden angepasst." } },
+      { "@type": "Question", "name": "Wie buche ich einen Kurs?", "acceptedAnswer": { "@type": "Answer", "text": "Über das Kontaktformular auf der Website oder per Mail – der Wunschtermin wird individuell abgestimmt." } }
+    ]
+  }
+  </script>
 
   <!-- ====== Schriftarten ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,6 +161,7 @@
         <li><a href="#ablauf">Ablauf</a></li>
         <li><a href="#kraeuter">Kräuter</a></li>
         <li><a href="#uebermich">Über mich</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt" class="nav__cta">Kontakt</a></li>
       </ul>
     </nav>
@@ -109,9 +176,10 @@
         <h1 class="hero__title">Kochen &amp; Backen,<br>das zu <em>dir</em> kommt</h1>
         <p class="hero__text">
           SylviasGusto bringt das Kocherlebnis direkt zu dir – nach Hause,
-          ins Büro oder an deinen Lieblingsort. Ob Familie, Freundesrunde oder Team:
-          Gemeinsam kochen, lachen und genießen wir. Du brauchst nur eine Küche und
-          gute Laune – um den Rest kümmere ich mich.
+          ins Büro oder an deinen Lieblingsort in Wolnzach, der Hallertau und
+          Umgebung. Ob Familie, Freundesrunde oder Team: Gemeinsam kochen, lachen
+          und genießen wir. Du brauchst nur eine Küche und gute Laune – um den
+          Rest kümmere ich mich.
         </p>
         <div class="hero__actions">
           <a href="#preise" class="btn btn--primary">Kurse entdecken</a>
@@ -328,7 +396,7 @@
     <section class="section section--cream" id="uebermich">
       <div class="container about">
         <div class="about__photo">
-          <img src="assets/img/Familie%20Mauermaier-47.jpg" alt="Sylvia – SylviasGusto" class="about__img" />
+          <img src="assets/img/Familie%20Mauermaier-47.jpg" alt="Sylvia Mauermaier – Kochkurs-Leiterin von SylviasGusto aus Wolnzach" class="about__img" loading="lazy" />
         </div>
         <div class="about__text">
           <p class="section__eyebrow">Über mich</p>
@@ -383,8 +451,78 @@
       </div>
     </section>
 
+    <!-- ============================ FAQ / HÄUFIGE FRAGEN ============================ -->
+    <section class="section section--cream" id="faq">
+      <div class="container">
+        <p class="section__eyebrow">Häufige Fragen</p>
+        <h2 class="section__title">Alles Wichtige auf einen Blick</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Wo finden die Kurse statt?</summary>
+            <p>Mobil bei dir – zuhause, im Büro oder an deinem Wunschort. Mein
+               Einsatzgebiet ist Wolnzach in der Hallertau mit einem Umkreis von
+               rund 100 km, also z.&nbsp;B. Ingolstadt, Pfaffenhofen an der Ilm,
+               Freising, München, Regensburg oder Landshut. Alternativ finden Kurse
+               in meiner Seminarküche in kleiner Runde mit maximal 8 Personen statt.</p>
+          </details>
+          <details>
+            <summary>Was brauche ich für einen mobilen Kurs?</summary>
+            <p>Nur eine ganz normale Küche und gute Laune. Zutaten, Rezepte und
+               alles, was wir sonst brauchen, bringe ich mit.</p>
+          </details>
+          <details>
+            <summary>Brauche ich Vorkenntnisse?</summary>
+            <p>Nein. Wir setzen alltagstaugliche Rezepte gemeinsam um – ohne
+               Chi-Chi, verständlich erklärt und für jedes Niveau geeignet.</p>
+          </details>
+          <details>
+            <summary>Was ist im Kurspreis enthalten?</summary>
+            <p>Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle
+               Lebensmittelkosten und die Rezepte per Mail zum Nachkochen daheim.</p>
+          </details>
+          <details>
+            <summary>Backen wir auch mit Sauerteig?</summary>
+            <p>Ja! In meinen Brotback-Seminaren backen wir Brot und Kleingebäck –
+               alltagstaugliche Rezepte, auch mit Sauerteig.</p>
+          </details>
+          <details>
+            <summary>Ab welchem Alter können Kinder teilnehmen?</summary>
+            <p>Kinderkurse gibt es ab 5 Jahren. Kindergeburtstage sind für 5 bis 8
+               Kinder ausgelegt und dauern etwa 2 Stunden.</p>
+          </details>
+          <details>
+            <summary>Wie viele Personen können teilnehmen?</summary>
+            <p>In meiner Seminarküche maximal 8 Personen. Mobile Events sind ab 8
+               Personen jederzeit exklusiv buchbar – bei Vereinen und größeren
+               Gruppen stimmen wir die Größe individuell ab.</p>
+          </details>
+          <details>
+            <summary>Bietest du auch Kurse für Vereine an?</summary>
+            <p>Ja, Kurse und Vorträge für Vereine und Gruppen sind mein beliebtestes
+               Angebot – unter anderem bin ich Referentin für den KDFB
+               Diözesanverband Regensburg. Themen und Umfang nach Absprache.</p>
+          </details>
+          <details>
+            <summary>Kostet die Anfahrt extra?</summary>
+            <p>Die Anfahrt im Umkreis ist inklusive. Für weitere Strecken machen
+               wir ein faires Angebot auf Anfrage.</p>
+          </details>
+          <details>
+            <summary>Können Allergien und Unverträglichkeiten berücksichtigt werden?</summary>
+            <p>Ja, sag mir einfach vorab Bescheid – die Rezepte passe ich gerne an.</p>
+          </details>
+          <details>
+            <summary>Wie buche ich einen Kurs?</summary>
+            <p>Schreib mir über das Kontaktformular oder per Mail, welcher Kurs
+               dich interessiert – wir finden gemeinsam deinen Wunschtermin.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ============================ KONTAKT / ANFRAGE ============================ -->
-    <section class="section section--cream" id="kontakt">
+    <section class="section" id="kontakt">
       <div class="container contact">
         <div class="contact__info">
           <p class="section__eyebrow">Kontakt</p>
@@ -395,7 +533,7 @@
           <ul class="contact__list">
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><strong>Mobil:</strong> <a href="tel:+490000000000">0000 / 000 000</a></li>
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><strong>Mail:</strong> <a href="mailto:s.mauermaier@gmx.de">s.mauermaier@gmx.de</a></li>
-            <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><strong>Einsatzgebiet:</strong> Region (Platzhalter) &amp; Umgebung</li>
+            <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><strong>Einsatzgebiet:</strong> Wolnzach (Hallertau) &amp; Umkreis ca. 100 km – z.&nbsp;B. Ingolstadt, Pfaffenhofen, Freising, München, Regensburg, Landshut</li>
           </ul>
 
           <div class="contact__social">
@@ -509,6 +647,7 @@
         <a href="#willkommen">Willkommen</a>
         <a href="#angebot">Angebot</a>
         <a href="#preise">Kurse &amp; Preise</a>
+        <a href="#faq">FAQ</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
       <nav class="footer__legal" aria-label="Rechtliches">
