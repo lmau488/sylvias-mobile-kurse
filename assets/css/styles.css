@@ -154,6 +154,7 @@ a { color: var(--terracotta-dark); }
   padding: 96px 0 104px;
   text-align: center;
 }
+.hero__logo { display: block; width: clamp(150px, 24vw, 230px); height: auto; margin: 0 auto 28px; border-radius: 50%; box-shadow: 0 14px 44px rgba(0, 0, 0, .30); }
 .hero__eyebrow { text-transform: uppercase; letter-spacing: .22em; font-weight: 700; font-size: .8rem; opacity: .9; margin: 0 0 12px; }
 .hero__title { font-family: var(--font-head); font-weight: 700; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; margin: 0 0 20px; }
 .hero__title em { color: #ffd9a8; font-style: italic; }
