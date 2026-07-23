@@ -9,6 +9,7 @@
   <title>SylviasGusto – Mobile Koch- & Backkurse in Wolnzach, Hallertau & Umgebung</title>
   <meta name="description" content="Mobile Koch- und Backkurse in Wolnzach (Hallertau) und im Umkreis von 100 km – z. B. Ingolstadt, Pfaffenhofen, Freising, München, Regensburg. Kochevents, Kinderkurse, Brotback-Seminare mit Sauerteig, Kräuterkurse und Kindergeburtstage – bei dir zuhause oder in der Seminarküche." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="google-site-verification" content="KHwXwGbQaHHRVZFRnMRTSf_4VCEIkD8LGFLKPzjC2V4" />
   <link rel="canonical" href="https://lmau488.github.io/sylvias-mobile-kurse/" />
 
   <!-- ====== Social-Media-Vorschau (Open Graph & Twitter) ====== -->
@@ -18,17 +19,19 @@
   <meta property="og:description" content="Kochevents, Kinderkurse, Brotback-Seminare und Kräuterkurse – mobil bei dir zuhause oder in der Seminarküche. Wolnzach, Hallertau und Umkreis 100 km." />
   <meta property="og:url" content="https://lmau488.github.io/sylvias-mobile-kurse/" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg" />
+  <meta property="og:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SylviasGusto – Mobile Koch- & Backkurse in Wolnzach & Umgebung" />
   <meta name="twitter:description" content="Kochevents, Kinderkurse, Brotback-Seminare und Kräuterkurse – mobil bei dir oder in der Seminarküche." />
-  <meta name="twitter:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg" />
+  <meta name="twitter:image" content="https://lmau488.github.io/sylvias-mobile-kurse/assets/img/og-image.jpg" />
 
   <!-- ====== Sicherheit: Content-Security-Policy per Meta-Tag ======
        (Auf GitHub Pages können keine echten Security-Header gesetzt werden,
         deshalb hier per Meta-Tag. Siehe README für die volle Absicherung via Cloudflare.) -->
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; object-src 'none'" />
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -36,7 +39,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
   <!-- ====== Ladezeit: Hero-Bild früh laden (Core Web Vitals / LCP) ====== -->
-  <link rel="preload" as="image" href="assets/img/Familie%20Mauermaier-48.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/img/hero-koch.webp" fetchpriority="high" />
 
   <!-- ====== Strukturierte Daten für Google (Local SEO) ====== -->
   <script type="application/ld+json">
@@ -46,11 +49,13 @@
     "name": "SylviasGusto",
     "description": "Mobile Koch- und Backkurse in Wolnzach (Hallertau) und im Umkreis von 100 km: Kochevents, Kinderkurse, Brotback-Seminare mit Sauerteig, Kräuterkurse und Kindergeburtstage – bei dir zuhause oder in der Seminarküche.",
     "url": "https://lmau488.github.io/sylvias-mobile-kurse/",
-    "image": "https://lmau488.github.io/sylvias-mobile-kurse/assets/img/Familie%20Mauermaier-47.jpg",
+    "image": "https://lmau488.github.io/sylvias-mobile-kurse/assets/img/og-image.jpg",
     "email": "s.mauermaier@gmx.de",
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Wolnzacher Weg 9a",
+      "postalCode": "85283",
       "addressLocality": "Wolnzach",
       "addressRegion": "Bayern",
       "addressCountry": "DE"
@@ -93,10 +98,9 @@
   }
   </script>
 
-  <!-- ====== Schriftarten ====== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&family=Dancing+Script:wght@600&family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+  <!-- ====== Schriftarten: lokal eingebunden (DSGVO – kein Kontakt zu Google-Servern) ====== -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-latin-700-normal.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/nunito-sans-latin-400-normal.woff2" crossorigin />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -106,7 +110,7 @@
   <header class="site-header" id="top">
     <div class="topbar">
       <div class="container topbar__inner">
-        <a class="topbar__contact" href="tel:+490000000000"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Mobil: 0000 / 000 000</a>
+        <!-- Telefonnummer: wird ergänzt, sobald die echte Nummer feststeht -->
         <a class="topbar__contact" href="mailto:s.mauermaier@gmx.de"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg> s.mauermaier@gmx.de</a>
       </div>
     </div>
@@ -449,7 +453,7 @@
     <section class="section section--cream" id="uebermich">
       <div class="container about">
         <div class="about__photo">
-          <img src="assets/img/Familie%20Mauermaier-47.jpg" alt="Sylvia Mauermaier – Kochkurs-Leiterin von SylviasGusto aus Wolnzach" class="about__img" loading="lazy" />
+          <img src="assets/img/sylvia-portrait.webp" alt="Sylvia Mauermaier – Kochkurs-Leiterin von SylviasGusto aus Wolnzach" class="about__img" width="900" height="600" loading="lazy" />
         </div>
         <div class="about__text">
           <p class="section__eyebrow">Über mich</p>
@@ -478,7 +482,11 @@
       </div>
     </section>
 
-    <!-- ============================ KUNDENSTIMMEN ============================ -->
+    <!-- ============================ KUNDENSTIMMEN ============================
+         Vorerst ausgeblendet, bis echte Kundenstimmen vorliegen. Platzhalter-Zitate
+         auf einer Live-Seite wirken unseriös und sind als "Kundenstimmen" rechtlich
+         heikel (Irreführung). Zum Aktivieren: echte Zitate eintragen und den
+         Kommentar um diesen Block entfernen.
     <section class="section" id="stimmen">
       <div class="container">
         <p class="section__eyebrow">Ehrliche Meinungen</p>
@@ -503,6 +511,7 @@
         </div>
       </div>
     </section>
+    Ende Kundenstimmen-Block -->
 
     <!-- ============================ FAQ / HÄUFIGE FRAGEN ============================ -->
     <section class="section section--cream" id="faq">
@@ -584,7 +593,7 @@
              einem Kurs kennenzulernen.</p>
 
           <ul class="contact__list">
-            <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><strong>Mobil:</strong> <a href="tel:+490000000000">0000 / 000 000</a></li>
+            <!-- Telefon-Eintrag: wird ergänzt, sobald die echte Nummer feststeht -->
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><strong>Mail:</strong> <a href="mailto:s.mauermaier@gmx.de">s.mauermaier@gmx.de</a></li>
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><strong>Einsatzgebiet:</strong> Wolnzach (Hallertau) &amp; Umgebung – ich komme zu dir</li>
           </ul>
