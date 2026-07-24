@@ -1,4 +1,35 @@
 <!DOCTYPE html>
+<!-- ═════════════════════════════════════════════════════════════════════
+     WEGWEISER FÜR ÄNDERUNGEN  (dieser Kasten ist für Besucher unsichtbar)
+
+     So änderst du etwas an der Website:
+     github.com/lmau488/sylvias-mobile-kurse öffnen → Datei anklicken →
+     Stift-Symbol (Edit) → ändern → grüner Knopf "Commit changes" →
+     nach 1–2 Minuten ist es automatisch online.
+     Ausführliche Hilfe: Datei "Anleitung-Website-aendern.html"
+     im Website-Ordner auf dem PC (einfach doppelklicken).
+
+     Die wichtigsten Stellen findest du in dieser Datei mit der
+     Suchfunktion (Strg+F) über diese Stichwörter:
+
+       ÄNDERN: TERMINE        → Kurstermine eintragen, ändern, löschen
+       ÄNDERN: PREISE         → Preise anpassen (stehen an 3 Stellen!)
+       ÄNDERN: ANGEBOTE       → Kurs-Karten (Texte, Dauer, Preise)
+       ÄNDERN: TELEFON        → Telefonnummer freischalten (2 Stellen)
+       ÄNDERN: KUNDENSTIMMEN  → echte Zitate eintragen und einblenden
+       ÄNDERN: FAQ            → Fragen ergänzen oder anpassen
+
+     Normale Texte: einfach den Text ZWISCHEN den spitzen Klammern ändern.
+     Beispiel: bei <p>Hier steht Text</p> nur "Hier steht Text" anfassen.
+     Alles, was selbst in spitzen Klammern < > steht, ist Technik – bitte
+     stehen lassen.
+
+     GOLDENE REGELN
+     1. Immer nur EINE Sache ändern, dann speichern und live anschauen.
+     2. Nichts löschen, was du nicht verstehst – jede Änderung lässt sich
+        über "History" auf GitHub wiederherstellen (siehe Anleitung).
+     3. Umlaute, € und Anführungszeichen kannst du ganz normal tippen.
+     ═════════════════════════════════════════════════════════════════════ -->
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -41,7 +72,11 @@
   <!-- ====== Ladezeit: Hero-Bild früh laden (Core Web Vitals / LCP) ====== -->
   <link rel="preload" as="image" href="assets/img/hero-koch.webp" fetchpriority="high" />
 
-  <!-- ====== Strukturierte Daten für Google (Local SEO) ====== -->
+  <!-- ====== Strukturierte Daten für Google (Local SEO) ======
+       ÄNDERN: PREISE (Stelle 3 von 3) – Nur bei einer Preisänderung die
+       "price"-Zahlen im Block unten mit anpassen (aktuell 57, 82, 270).
+       Ansonsten hier bitte NICHTS ändern: Dieser Block ist für Besucher
+       unsichtbar und nur für Google gedacht. ====== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,7 +145,23 @@
   <header class="site-header" id="top">
     <div class="topbar">
       <div class="container topbar__inner">
-        <!-- Telefonnummer: wird ergänzt, sobald die echte Nummer feststeht -->
+        <!-- ═══════════════════════════════════════════════════════════════
+             ÄNDERN: TELEFON (Stelle 1 von 2 – farbige Leiste ganz oben)
+             So schaltest du die Telefonnummer frei:
+             1. Die komplette Vorlagen-Zeile unten kopieren (beginnt mit
+                <a class="topbar__contact" und endet mit </a>).
+             2. Direkt NACH diesem Kommentar-Kasten einfügen, also in eine
+                neue Zeile über dem E-Mail-Eintrag.
+             3. Beide Platzhalter-Nummern ersetzen: im tel:-Teil international
+                ohne Leerzeichen (aus 08442 123456 wird tel:+498442123456),
+                hinter dem > die Nummer, wie sie angezeigt werden soll.
+             4. Das Gleiche bei "Stelle 2 von 2" weiter unten machen
+                (Strg+F: ÄNDERN: TELEFON) – und die Nummer im Impressum
+                (Datei impressum.html, Abschnitt "Kontakt") ergänzen.
+
+<a class="topbar__contact" href="tel:+498442123456"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 08442 / 123 456</a>
+
+             ═══════════════════════════════════════════════════════════════ -->
         <a class="topbar__contact" href="mailto:s.mauermaier@gmx.de"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg> s.mauermaier@gmx.de</a>
       </div>
     </div>
@@ -180,6 +231,13 @@
           oder frag einfach nach deinem Wunschthema.
         </p>
 
+        <!-- ═══════════════════════════════════════════════════════════════
+             ÄNDERN: ANGEBOTE
+             Jede Kurs-Karte ist ein Block von <article ...> bis </article>.
+             Texte, Zeile "Dauer" und Preis einfach im Text ändern.
+             ACHTUNG bei Preisen: Preise stehen an 3 Stellen – Strg+F nach
+             "ÄNDERN: PREISE" führt dich zu allen.
+             ═══════════════════════════════════════════════════════════════ -->
         <div class="cards">
           <article class="card card--wide">
             <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -323,6 +381,15 @@
         <p class="section__eyebrow section__eyebrow--light">Preise &amp; Leistungen</p>
         <h2 class="section__title section__title--light">Im Kurs enthalten</h2>
 
+        <!-- ═══════════════════════════════════════════════════════════════
+             ÄNDERN: PREISE (Stelle 1 von 3 – die Preis-Kacheln unten)
+             Preise stehen an 3 Stellen und sollten überall gleich sein:
+               Stelle 1: hier unten in den Preis-Kacheln
+               Stelle 2: oben bei den Angebots-Karten (ÄNDERN: ANGEBOTE)
+               Stelle 3: ganz oben im unsichtbaren Google-Datenblock
+             Tipp: Mit Strg+F nach dem alten Preis suchen (z. B. 57) und
+             jede Fundstelle anpassen.
+             ═══════════════════════════════════════════════════════════════ -->
         <div class="price-grid">
           <div class="price-list">
             <ul class="included">
@@ -381,7 +448,26 @@
           als privater Termin buchbar, einfach anfragen.
         </p>
 
-        <!-- PLATZHALTER: echte Termine hier eintragen -->
+        <!-- ═══════════════════════════════════════════════════════════════
+             ÄNDERN: TERMINE
+             Jeder Termin ist ein Block von <article class="termin"> bis </article>.
+             Aktuell stehen hier 3 BEISPIEL-Termine als Vorlage.
+
+             • TERMIN ÄNDERN: Im Block anpassen: Tag (z. B. 26), Monat
+               (3 Buchstaben: Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez),
+               Titel, Uhrzeit, Ort und Status.
+             • ECHTER TERMIN: das kleine Etikett
+               <span class="termin__tag">Beispieltermin</span> komplett löschen.
+             • NEUER TERMIN: einen kompletten Block von <article class="termin">
+               bis </article> kopieren, darunter einfügen und Inhalte anpassen.
+             • TERMIN VORBEI: den ganzen Block von <article class="termin">
+               bis einschließlich </article> löschen.
+             • STATUS (farbige Markierung rechts) – genau eine dieser drei
+               Varianten verwenden:
+               <span class="termin__status termin__status--free">Plätze frei</span>
+               <span class="termin__status termin__status--few">Nur noch wenige Plätze</span>
+               <span class="termin__status termin__status--full">Ausgebucht</span>
+             ═══════════════════════════════════════════════════════════════ -->
         <div class="termine">
           <article class="termin">
             <div class="termin__date" aria-hidden="true">
@@ -442,6 +528,9 @@
           Kein passender Termin dabei? Alle Kurse gibt es auch mobil bei dir zu
           Hause oder als Wunschtermin in der Seminarküche.
         </p>
+        <!-- Kursprogramm-PDF austauschen: neue PDF mit GENAU dem Namen
+             SylviasGusto-Kursprogramm.pdf in den Ordner assets/docs hochladen –
+             die alte Datei wird dabei automatisch ersetzt. -->
         <div class="center termine__actions">
           <a href="assets/docs/SylviasGusto-Kursprogramm.pdf" class="btn btn--outline" download>
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -485,10 +574,18 @@
     </section>
 
     <!-- ============================ KUNDENSTIMMEN ============================
-         Vorerst ausgeblendet, bis echte Kundenstimmen vorliegen. Platzhalter-Zitate
-         auf einer Live-Seite wirken unseriös und sind als "Kundenstimmen" rechtlich
-         heikel (Irreführung). Zum Aktivieren: echte Zitate eintragen und den
-         Kommentar um diesen Block entfernen.
+         ÄNDERN: KUNDENSTIMMEN – aktuell AUSGEBLENDET, bis echte Zitate da sind.
+         (Erfundene Zitate wirken unseriös und sind rechtlich heikel.)
+
+         SO BLENDEST DU DIE SEKTION EIN:
+         1. Unten die drei Beispiel-Zitate durch echte ersetzen und statt
+            "Platzhalter-Stimme" den Namen eintragen, z. B. "Anna M. aus
+            Pfaffenhofen" (vorher das Einverständnis der Person einholen).
+         2. Die komplette Zeile, die mit "AUSBLENDEN-ANFANG" beginnt, löschen.
+         3. Die komplette Zeile, die mit "AUSBLENDEN-ENDE" endet, löschen.
+         Fertig – nach dem Speichern ist die Sektion sichtbar.
+         ======================================================================= -->
+    <!-- AUSBLENDEN-ANFANG (diese ganze Zeile löschen, um die Kundenstimmen einzublenden)
     <section class="section" id="stimmen">
       <div class="container">
         <p class="section__eyebrow">Ehrliche Meinungen</p>
@@ -513,7 +610,7 @@
         </div>
       </div>
     </section>
-    Ende Kundenstimmen-Block -->
+    (diese ganze Zeile löschen, um die Kundenstimmen einzublenden) AUSBLENDEN-ENDE -->
 
     <!-- ============================ FAQ / HÄUFIGE FRAGEN ============================ -->
     <section class="section section--cream" id="faq">
@@ -521,6 +618,14 @@
         <p class="section__eyebrow">Häufige Fragen</p>
         <h2 class="section__title">Alles Wichtige auf einen Blick</h2>
 
+        <!-- ═══════════════════════════════════════════════════════════════
+             ÄNDERN: FAQ
+             Jede Frage ist ein Block von <details> bis </details>.
+             • Text ändern: Frage steht in <summary>, Antwort im <p> darunter.
+             • Neue Frage: einen kompletten <details>-Block kopieren,
+               darunter einfügen und Texte anpassen.
+             • Frage löschen: den Block von <details> bis </details> entfernen.
+             ═══════════════════════════════════════════════════════════════ -->
         <div class="faq">
           <details>
             <summary>Wo finden die Kurse statt?</summary>
@@ -595,7 +700,17 @@
              einem Kurs kennenzulernen.</p>
 
           <ul class="contact__list">
-            <!-- Telefon-Eintrag: wird ergänzt, sobald die echte Nummer feststeht -->
+            <!-- ═══════════════════════════════════════════════════════════
+                 ÄNDERN: TELEFON (Stelle 2 von 2 – Kontaktliste)
+                 Die Vorlagen-Zeile unten kopieren, direkt NACH diesem
+                 Kommentar-Kasten einfügen (über dem Mail-Eintrag) und beide
+                 Platzhalter-Nummern ersetzen – wie bei Stelle 1 erklärt.
+                 Danach die Nummer auch im Impressum (Datei impressum.html,
+                 Abschnitt "Kontakt") ergänzen.
+
+<li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><strong>Telefon:</strong> <a href="tel:+498442123456">08442 / 123 456</a></li>
+
+                 ═══════════════════════════════════════════════════════════ -->
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><strong>Mail:</strong> <a href="mailto:s.mauermaier@gmx.de">s.mauermaier@gmx.de</a></li>
             <li><svg class="icon icon--contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><strong>Einsatzgebiet:</strong> Wolnzach (Hallertau) &amp; Umgebung – ich komme zu dir</li>
           </ul>
