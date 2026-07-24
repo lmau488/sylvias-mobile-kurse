@@ -25,6 +25,7 @@
   --olive-dark: #46532f;
   --cream: #faf4e9;
   --cream-2: #f3e9d6;
+  --sage: #e7ecd8;
   --ink: #33291f;
   --muted: #6f6356;
   --white: #ffffff;
@@ -184,6 +185,7 @@ a { color: var(--terracotta-dark); }
    ===================================================================== */
 .section { padding: 84px 0; }
 .section--cream { background: var(--cream-2); }
+.section--sage { background: var(--sage); }
 .section--green { background: var(--olive); }
 
 .section__eyebrow { text-transform: uppercase; letter-spacing: .2em; font-weight: 700; font-size: .8rem; color: var(--terracotta); text-align: center; margin: 0 0 10px; }
