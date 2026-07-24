@@ -20,7 +20,7 @@ Mit **Strg+F** nach diesen Stichwörtern suchen:
 
 | Suchwort | Was sich dort ändern lässt |
 |---|---|
-| `ÄNDERN: TERMINE` | Kurstermine eintragen, ändern, löschen |
+| **Termine** | stehen in einer eigenen, einfachen Datei: **`assets/js/termine.js`** – pro Termin eine Zeile, ganz ohne HTML |
 | `ÄNDERN: PREISE` | Preise anpassen (stehen an 3 Stellen) |
 | `ÄNDERN: ANGEBOTE` | Kurs-Karten: Texte, Dauer, Preise |
 | `ÄNDERN: TELEFON` | Telefonnummer freischalten (2 Stellen) |
@@ -53,7 +53,8 @@ robots.txt          Anweisungen für Suchmaschinen
 sitemap.xml         Seitenliste für Google
 googled084….html    Nachweis für die Google Search Console (nicht löschen!)
 assets/css/         Design (styles.css – Farben ganz oben im :root-Block)
-assets/js/          Menü- und Formular-Logik
+assets/js/termine.js  DIE TERMIN-LISTE – hier Termine eintragen/ändern
+assets/js/script.js   Menü, Formular & Aufbau der Termin-Kacheln
 assets/img/         Bilder (webp/jpg – bitte klein halten)
 assets/fonts/       Schriften, lokal eingebunden (DSGVO-konform)
 assets/docs/        Kursprogramm als PDF

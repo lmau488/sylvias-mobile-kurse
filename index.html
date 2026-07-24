@@ -12,7 +12,8 @@
      Die wichtigsten Stellen findest du in dieser Datei mit der
      Suchfunktion (Strg+F) über diese Stichwörter:
 
-       ÄNDERN: TERMINE        → Kurstermine eintragen, ändern, löschen
+       ÄNDERN: TERMINE        → Termine stehen in der Datei assets/js/termine.js
+                                (eigene, einfache Liste – dort eine Zeile pro Termin)
        ÄNDERN: PREISE         → Preise anpassen (stehen an 3 Stellen!)
        ÄNDERN: ANGEBOTE       → Kurs-Karten (Texte, Dauer, Preise)
        ÄNDERN: TELEFON        → Telefonnummer freischalten (2 Stellen)
@@ -450,79 +451,21 @@
 
         <!-- ═══════════════════════════════════════════════════════════════
              ÄNDERN: TERMINE
-             Jeder Termin ist ein Block von <article class="termin"> bis </article>.
-             Aktuell stehen hier 3 BEISPIEL-Termine als Vorlage.
-
-             • TERMIN ÄNDERN: Im Block anpassen: Tag (z. B. 26), Monat
-               (3 Buchstaben: Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez),
-               Titel, Uhrzeit, Ort und Status.
-             • ECHTER TERMIN: das kleine Etikett
-               <span class="termin__tag">Beispieltermin</span> komplett löschen.
-             • NEUER TERMIN: einen kompletten Block von <article class="termin">
-               bis </article> kopieren, darunter einfügen und Inhalte anpassen.
-             • TERMIN VORBEI: den ganzen Block von <article class="termin">
-               bis einschließlich </article> löschen.
-             • STATUS (farbige Markierung rechts) – genau eine dieser drei
-               Varianten verwenden:
-               <span class="termin__status termin__status--free">Plätze frei</span>
-               <span class="termin__status termin__status--few">Nur noch wenige Plätze</span>
-               <span class="termin__status termin__status--full">Ausgebucht</span>
+             Die Termine stehen jetzt in einer eigenen, einfachen Datei:
+                 assets/js/termine.js
+             Dort trägst du pro Termin EINE Zeile ein – ganz ohne HTML.
+             Die Anleitung steht in der Datei selbst und in
+             "Anleitung-Website-aendern.html" (Kapitel 3).
+             Hier in der index.html musst du für Termine NICHTS mehr ändern.
              ═══════════════════════════════════════════════════════════════ -->
         <div class="termine">
-          <article class="termin">
-            <div class="termin__date" aria-hidden="true">
-              <span class="termin__day">26</span>
-              <span class="termin__month">Sep</span>
-            </div>
-            <div class="termin__body">
-              <h3 class="termin__title">Brotback-Seminar <span class="termin__tag">Beispieltermin</span></h3>
-              <p class="termin__meta">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10:00–14:00 Uhr &nbsp;·&nbsp;
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seminarküche Wolnzach &nbsp;·&nbsp; max. 8 Personen
-              </p>
-            </div>
-            <div class="termin__side">
-              <span class="termin__status termin__status--free">Plätze frei</span>
-              <a href="#kontakt" class="btn btn--primary termin__cta">Platz anfragen</a>
-            </div>
-          </article>
-
-          <article class="termin">
-            <div class="termin__date" aria-hidden="true">
-              <span class="termin__day">17</span>
-              <span class="termin__month">Okt</span>
-            </div>
-            <div class="termin__body">
-              <h3 class="termin__title">Kochevent: Herbstküche <span class="termin__tag">Beispieltermin</span></h3>
-              <p class="termin__meta">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 17:00–20:00 Uhr &nbsp;·&nbsp;
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seminarküche Wolnzach &nbsp;·&nbsp; max. 8 Personen
-              </p>
-            </div>
-            <div class="termin__side">
-              <span class="termin__status termin__status--few">Nur noch wenige Plätze</span>
-              <a href="#kontakt" class="btn btn--primary termin__cta">Platz anfragen</a>
-            </div>
-          </article>
-
-          <article class="termin">
-            <div class="termin__date" aria-hidden="true">
-              <span class="termin__day">07</span>
-              <span class="termin__month">Nov</span>
-            </div>
-            <div class="termin__body">
-              <h3 class="termin__title">Kinderkurs: Plätzchenbäckerei <span class="termin__tag">Beispieltermin</span></h3>
-              <p class="termin__meta">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 14:00–16:30 Uhr &nbsp;·&nbsp;
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seminarküche Wolnzach &nbsp;·&nbsp; max. 8 Kinder
-              </p>
-            </div>
-            <div class="termin__side">
-              <span class="termin__status termin__status--free">Plätze frei</span>
-              <a href="#kontakt" class="btn btn--primary termin__cta">Platz anfragen</a>
-            </div>
-          </article>
+          <!-- wird automatisch aus assets/js/termine.js aufgebaut -->
         </div>
+        <noscript>
+          <p class="termine__note">Zum Anzeigen der aktuellen Termine bitte
+          JavaScript aktivieren – oder lade unten das Kursprogramm als PDF
+          herunter bzw. frag deinen Wunschtermin direkt an.</p>
+        </noscript>
 
         <p class="termine__note">
           Kein passender Termin dabei? Alle Kurse gibt es auch mobil bei dir zu
@@ -818,6 +761,8 @@
     <p class="footer__copy">© <span id="year"></span> SylviasGusto · Alle Rechte vorbehalten.</p>
   </footer>
 
+  <!-- Termine-Liste: MUSS vor script.js stehen (script.js baut daraus die Kacheln) -->
+  <script src="assets/js/termine.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
