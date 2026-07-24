@@ -64,3 +64,57 @@ function showStatus(msg, type) {
   status.textContent = msg;
   status.className = "form-status" + (type ? " " + type : "");
 }
+
+/* =====================================================================
+   Termine aufbauen – liest die Liste aus assets/js/termine.js und
+   erzeugt daraus die Termin-Kacheln. (Zum Ändern IMMER termine.js
+   bearbeiten, hier drin ist nichts einzustellen.)
+   ===================================================================== */
+(function () {
+  const box = document.querySelector(".termine");
+  if (!box || typeof window.TERMINE !== "string") return;
+
+  const STATUS = {
+    frei:   { cls: "termin__status--free", txt: "Plätze frei" },
+    wenige: { cls: "termin__status--few",  txt: "Nur noch wenige Plätze" },
+    voll:   { cls: "termin__status--full", txt: "Ausgebucht" }
+  };
+
+  const CLOCK = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+  const PIN   = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  const html = window.TERMINE.split("\n").map(function (raw) {
+    const line = raw.trim();
+    if (!line || line.charAt(0) === "#") return "";            // leere Zeile / Notiz
+    const f = line.split("|").map(function (x) { return x.trim(); });
+    if (f.length < 7) return "";                                // unvollständige Zeile überspringen
+    const st = STATUS[(f[6] || "").toLowerCase()] || STATUS.frei;
+    return (
+      '<article class="termin">' +
+        '<div class="termin__date" aria-hidden="true">' +
+          '<span class="termin__day">' + esc(f[0]) + '</span>' +
+          '<span class="termin__month">' + esc(f[1]) + '</span>' +
+        '</div>' +
+        '<div class="termin__body">' +
+          '<h3 class="termin__title">' + esc(f[2]) + '</h3>' +
+          '<p class="termin__meta">' +
+            CLOCK + ' ' + esc(f[3]) + ' &nbsp;·&nbsp; ' +
+            PIN + ' ' + esc(f[4]) + ' &nbsp;·&nbsp; ' + esc(f[5]) +
+          '</p>' +
+        '</div>' +
+        '<div class="termin__side">' +
+          '<span class="termin__status ' + st.cls + '">' + st.txt + '</span>' +
+          '<a href="#kontakt" class="btn btn--primary termin__cta">Platz anfragen</a>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join("");
+
+  box.innerHTML = html;
+})();
