@@ -294,6 +294,7 @@ a { color: var(--terracotta-dark); }
 .termin__status { font-size: .8rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
 .termin__status--free { background: #e4ecd6; color: var(--olive-dark); }
 .termin__status--few { background: #ffe3c4; color: #9a5b17; }
+.termin__status--full { background: #f3d9ce; color: #a44e2d; } /* "Ausgebucht" – siehe Termin-Hinweise in index.html */
 .termin__cta { padding: 10px 20px; font-size: .9rem; }
 .termine__note { text-align: center; color: var(--muted, #7a6f60); max-width: 640px; margin: 28px auto 18px; }
 .termine__actions { margin-top: 4px; }
