@@ -34,10 +34,11 @@
      • Kein Backtick-Zeichen ` in einen Titel schreiben.
    ===================================================================== */
 
-// Die 3 Zeilen unten sind nur BEISPIELE (im Titel steht "(Beispiel)").
-// Ersetze sie durch echte Termine und entferne dabei das "(Beispiel)".
+// Zurzeit sind hier KEINE Termine eingetragen – die Website zeigt dann nur
+// den Hinweis auf das Kursprogramm-PDF. Sobald unten (zwischen den beiden
+// Backticks) echte Termin-Zeilen stehen, erscheinen sie automatisch wieder
+// als Kacheln auf der Website.
 window.TERMINE = `
-26 | Sep | Brotback-Seminar (Beispiel) | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 8 Personen | frei
-17 | Okt | Kochevent: Herbstküche (Beispiel) | 17:00–20:00 Uhr | Seminarküche Wolnzach | max. 8 Personen | wenige
-07 | Nov | Kinderkurs: Plätzchenbäckerei (Beispiel) | 14:00–16:30 Uhr | Seminarküche Wolnzach | max. 8 Kinder | frei
+# So sieht eine Termin-Zeile aus – zum Aktivieren das # am Anfang weglassen:
+# 26 | Sep | Brotback-Seminar | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 8 Personen | frei
 `;
