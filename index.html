@@ -14,11 +14,14 @@
 
        ÄNDERN: TERMINE        → Termine stehen in der Datei assets/js/termine.js
                                 (eigene, einfache Liste – dort eine Zeile pro Termin)
-       ÄNDERN: PREISE         → Preise anpassen (stehen an 3 Stellen!)
-       ÄNDERN: ANGEBOTE       → Kurs-Karten (Texte, Dauer, Preise)
+       ÄNDERN: ANGEBOTE       → Kurs-Karten (Texte)
+       ÄNDERN: LEISTUNGEN     → Kacheln im grünen Bereich (Angebots-Überblick)
        ÄNDERN: TELEFON        → Telefonnummer freischalten (2 Stellen)
        ÄNDERN: KUNDENSTIMMEN  → echte Zitate eintragen und einblenden
        ÄNDERN: FAQ            → Fragen ergänzen oder anpassen
+
+     Hinweis: Preise und Kursdauern stehen bewusst NICHT auf der Website –
+     sie werden auf Anfrage genannt. (Exklusive Events: ab 5 Personen.)
 
      Normale Texte: einfach den Text ZWISCHEN den spitzen Klammern ändern.
      Beispiel: bei <p>Hier steht Text</p> nur "Hier steht Text" anfassen.
@@ -74,10 +77,8 @@
   <link rel="preload" as="image" href="assets/img/hero-koch.webp" fetchpriority="high" />
 
   <!-- ====== Strukturierte Daten für Google (Local SEO) ======
-       ÄNDERN: PREISE (Stelle 3 von 3) – Nur bei einer Preisänderung die
-       "price"-Zahlen im Block unten mit anpassen (aktuell 57, 82, 270).
-       Ansonsten hier bitte NICHTS ändern: Dieser Block ist für Besucher
-       unsichtbar und nur für Google gedacht. ====== -->
+       Dieser Block ist für Besucher unsichtbar und nur für Google gedacht –
+       hier bitte NICHTS ändern. (Preise stehen bewusst keine drin.) ====== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -87,7 +88,6 @@
     "url": "https://lmau488.github.io/sylvias-mobile-kurse/",
     "image": "https://lmau488.github.io/sylvias-mobile-kurse/assets/img/og-image.jpg",
     "email": "s.mauermaier@gmx.de",
-    "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Wolnzacher Weg 9a",
@@ -104,10 +104,12 @@
     "founder": { "@type": "Person", "name": "Sylvia Mauermaier", "jobTitle": "Hauswirtschaftsmeisterin, Referentin für Hauswirtschaft und Ernährung, zertifizierte Kräuterpädagogin" },
     "sameAs": ["https://www.instagram.com/mobile_kurse/"],
     "makesOffer": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kochevents für Erwachsene" }, "price": "57", "priceCurrency": "EUR" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kinderkochkurse ab 5 Jahren" }, "price": "57", "priceCurrency": "EUR" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brotback-Seminare mit Sauerteig" }, "price": "82", "priceCurrency": "EUR" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kindergeburtstage" }, "price": "270", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kochevents für Erwachsene" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kinderkochkurse ab 5 Jahren" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brotback-Seminare mit Sauerteig" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kindergeburtstage" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Naturkosmetik-Kurse mit Kräutern" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kräuter-Hausapotheke: Salben, Tees und Tinkturen" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Vorträge für Vereine und Gruppen" } }
     ]
   }
@@ -120,12 +122,12 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "Wo finden die Kochkurse von SylviasGusto statt?", "acceptedAnswer": { "@type": "Answer", "text": "Mobil bei dir zuhause, im Büro oder an deinem Wunschort – im Einsatzgebiet Wolnzach (Hallertau) mit rund 100 km Umkreis, z. B. Ingolstadt, Pfaffenhofen an der Ilm, Freising, München, Regensburg oder Landshut. Alternativ in der Seminarküche in kleiner Runde mit maximal 8 Personen." } },
-      { "@type": "Question", "name": "Was brauche ich für einen mobilen Kochkurs?", "acceptedAnswer": { "@type": "Answer", "text": "Nur eine ganz normale Küche und gute Laune. Zutaten, Rezepte und Equipment bringt Sylvia mit." } },
+      { "@type": "Question", "name": "Was brauche ich für einen mobilen Kochkurs?", "acceptedAnswer": { "@type": "Answer", "text": "Nur eine ganz normale Küche und gute Laune. Alles, was wir brauchen – Zutaten, Rezepte und Equipment – bringt Sylvia nach Rücksprache mit." } },
       { "@type": "Question", "name": "Brauche ich Vorkenntnisse?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Es werden alltagstaugliche Rezepte gemeinsam umgesetzt – verständlich erklärt und für jedes Niveau geeignet." } },
-      { "@type": "Question", "name": "Was ist im Kurspreis enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten und die Rezepte per Mail." } },
+      { "@type": "Question", "name": "Was ist im Kurs enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten und die Rezepte per Mail." } },
       { "@type": "Question", "name": "Wird auch mit Sauerteig gebacken?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, in den Brotback-Seminaren werden Brot und Kleingebäck gebacken – alltagstaugliche Rezepte, auch mit Sauerteig." } },
-      { "@type": "Question", "name": "Ab welchem Alter können Kinder teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Kinderkurse ab 5 Jahren. Kindergeburtstage für 5 bis 8 Kinder, Dauer etwa 2 Stunden." } },
-      { "@type": "Question", "name": "Wie viele Personen können teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "In der Seminarküche maximal 8 Personen. Mobile Events sind ab 8 Personen exklusiv buchbar, größere Gruppen nach Absprache." } },
+      { "@type": "Question", "name": "Ab welchem Alter können Kinder teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Kinderkurse ab 5 Jahren. Kindergeburtstage für 5 bis 8 Kinder." } },
+      { "@type": "Question", "name": "Wie viele Personen können teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "In der Seminarküche maximal 8 Personen. Mobile Events sind ab 5 Personen exklusiv buchbar, größere Gruppen nach Absprache." } },
       { "@type": "Question", "name": "Gibt es Kurse für Vereine?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, Kurse und Vorträge für Vereine und Gruppen – Sylvia ist unter anderem Referentin für den KDFB Diözesanverband Regensburg." } },
       { "@type": "Question", "name": "Kostet die Anfahrt extra?", "acceptedAnswer": { "@type": "Answer", "text": "Die Anfahrt im Umkreis ist inklusive, weitere Strecken auf Anfrage." } },
       { "@type": "Question", "name": "Können Allergien berücksichtigt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, einfach vorab Bescheid geben – die Rezepte werden angepasst." } },
@@ -183,7 +185,7 @@
       <ul class="nav__links" id="navLinks">
         <li><a href="#willkommen">Willkommen</a></li>
         <li><a href="#angebot">Angebot</a></li>
-        <li><a href="#preise">Kurse &amp; Preise</a></li>
+        <li><a href="#preise">Leistungen</a></li>
         <li><a href="#termine">Termine</a></li>
         <li><a href="#ablauf">Ablauf</a></li>
         <li><a href="#kraeuter">Kräuter</a></li>
@@ -235,9 +237,9 @@
         <!-- ═══════════════════════════════════════════════════════════════
              ÄNDERN: ANGEBOTE
              Jede Kurs-Karte ist ein Block von <article ...> bis </article>.
-             Texte, Zeile "Dauer" und Preis einfach im Text ändern.
-             ACHTUNG bei Preisen: Preise stehen an 3 Stellen – Strg+F nach
-             "ÄNDERN: PREISE" führt dich zu allen.
+             Texte einfach im Text ändern.
+             (Preise und Kursdauern stehen bewusst nicht auf der Website –
+             sie werden auf Anfrage genannt.)
              ═══════════════════════════════════════════════════════════════ -->
         <div class="cards">
           <article class="card card--wide">
@@ -258,16 +260,6 @@
             <p class="card__tag">Für Erwachsene</p>
             <p>Kochen, lachen, genießen. Ideal für Freundesrunden, Teams oder alle,
                die Lust auf einen geselligen Abend mit gutem Essen haben.</p>
-            <p class="card__meta"><strong>Dauer:</strong> 3 Stunden · <strong>ab</strong> 57,– €</p>
-          </article>
-
-          <article class="card">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            <h3 class="card__title">Kinderkurse</h3>
-            <p class="card__tag">Für Kinder ab 5 Jahre</p>
-            <p>Schürze um und los geht's! Gemeinsam kochen oder backen wir leckere
-               Sachen, probieren Neues und haben dabei jede Menge Spaß.</p>
-            <p class="card__meta"><strong>Dauer:</strong> 2,5–3 Stunden · <strong>ab</strong> 57,– €</p>
           </article>
 
           <article class="card">
@@ -276,7 +268,6 @@
             <p class="card__tag">Für Erwachsene</p>
             <p>Brot und Kleingebäck: Alltagstaugliche Rezepte werden gemeinsam
                umgesetzt – ohne Chi-Chi und auch mit Sauerteig.</p>
-            <p class="card__meta"><strong>Dauer:</strong> 4 Stunden · <strong>ab</strong> 82,– €</p>
           </article>
 
           <article class="card">
@@ -285,7 +276,14 @@
             <p class="card__tag">Für Kinder &amp; Teenies</p>
             <p>Die Geburtstagsparty der besonderen Art – koche oder backe zusammen
                mit deinen Freunden bei dir zuhause.</p>
-            <p class="card__meta"><strong>Dauer:</strong> 2 Stunden · <strong>ab</strong> 270 €</p>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <h3 class="card__title">Kinderkurse</h3>
+            <p class="card__tag">Für Kinder ab 5 Jahre</p>
+            <p>Schürze um und los geht's! Gemeinsam kochen oder backen wir leckere
+               Sachen, probieren Neues und haben dabei jede Menge Spaß.</p>
           </article>
 
         </div>
@@ -363,11 +361,8 @@
           </article>
         </div>
 
-        <!-- Beispielbilder: Fermentieren -->
+        <!-- Beispielbild: Fermentieren -->
         <div class="gallery">
-          <figure class="gallery__item">
-            <img src="assets/img/fermentieren-1.jpg" alt="Fermentiertes Gemüse in Einmachgläsern – Bohnen, Karotten und Kraut" loading="lazy" />
-          </figure>
           <figure class="gallery__item">
             <img src="assets/img/fermentieren-2.jpg" alt="Selbst eingemachtes und fermentiertes Gemüse auf dem Gartentisch" loading="lazy" />
           </figure>
@@ -376,23 +371,39 @@
       </div>
     </section>
 
-    <!-- ============================ PREISE & LEISTUNGEN ============================ -->
+    <!-- ============================ LEISTUNGEN & ANGEBOTE ============================ -->
     <section class="section section--green" id="preise">
+      <!-- Dekorativer Kräuterzweig rechts (rein dekorativ, für Vorlese-Programme unsichtbar) -->
+      <svg class="preise-deco" viewBox="0 -25 225 355" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M60 320 C 88 244, 118 180, 150 24"/>
+        <path d="M72.0 282.0 Q 51.0 284.4 34.9 266.9 Q 59.0 264.9 72.0 282.0 Z"/>
+        <path d="M86.0 246.0 Q 97.7 228.4 121.4 227.3 Q 107.4 247.0 86.0 246.0 Z"/>
+        <path d="M99.0 210.0 Q 76.9 208.6 63.4 187.6 Q 88.7 190.0 99.0 210.0 Z"/>
+        <path d="M111.0 174.0 Q 119.9 153.7 144.2 148.2 Q 133.4 171.2 111.0 174.0 Z"/>
+        <path d="M122.0 139.0 Q 100.9 139.5 86.4 120.7 Q 110.5 120.8 122.0 139.0 Z"/>
+        <path d="M132.0 104.0 Q 141.6 86.4 164.0 83.4 Q 152.4 103.2 132.0 104.0 Z"/>
+        <path d="M140.0 72.0 Q 122.3 69.3 112.9 51.4 Q 133.1 55.1 140.0 72.0 Z"/>
+        <path d="M146.0 44.0 Q 151.4 28.0 169.5 22.2 Q 162.8 40.4 146.0 44.0 Z"/>
+        <path d="M150.0 22.0 Q 144.6 3.8 157.6 -13.2 Q 163.1 7.8 150.0 22.0 Z"/>
+      </svg>
       <div class="container">
-        <p class="section__eyebrow section__eyebrow--light">Preise &amp; Leistungen</p>
-        <h2 class="section__title section__title--light">Im Kurs enthalten</h2>
+        <p class="section__eyebrow section__eyebrow--light">Leistungen &amp; Angebote</p>
+        <h2 class="section__title section__title--light">Das erwartet dich</h2>
 
         <!-- ═══════════════════════════════════════════════════════════════
-             ÄNDERN: PREISE (Stelle 1 von 3 – die Preis-Kacheln unten)
-             Preise stehen an 3 Stellen und sollten überall gleich sein:
-               Stelle 1: hier unten in den Preis-Kacheln
-               Stelle 2: oben bei den Angebots-Karten (ÄNDERN: ANGEBOTE)
-               Stelle 3: ganz oben im unsichtbaren Google-Datenblock
-             Tipp: Mit Strg+F nach dem alten Preis suchen (z. B. 57) und
-             jede Fundstelle anpassen.
+             ÄNDERN: LEISTUNGEN
+             Links steht, was in jedem Kurs enthalten ist. Rechts stehen
+             6 Kacheln als Angebots-Überblick. Texte einfach im Text ändern.
+             Preise und Kursdauern stehen bewusst NICHT auf der Website –
+             sie werden auf Anfrage genannt.
+             (Sollen später doch wieder Preise angezeigt werden: in einer
+             Kachel über der grauen Textzeile eine Zeile wie
+             <p class="pricecard__price">57,– €</p> einfügen – das Design
+             dafür ist in styles.css noch vorhanden.)
              ═══════════════════════════════════════════════════════════════ -->
         <div class="price-grid">
           <div class="price-list">
+            <h3 class="price-col-title">In jedem Kurs enthalten</h3>
             <ul class="included">
               <li>Leihschürze</li>
               <li>Willkommensgetränk</li>
@@ -403,34 +414,47 @@
             </ul>
           </div>
 
-          <div class="price-cards">
-            <div class="pricecard">
-              <h3>Kochevent</h3>
-              <p class="pricecard__price">57,– €</p>
-              <p class="pricecard__sub">pro Person · 3 Std.</p>
-            </div>
-            <div class="pricecard">
-              <h3>Kinderkurs</h3>
-              <p class="pricecard__price">57,– €</p>
-              <p class="pricecard__sub">pro Kind · 2,5–3 Std.</p>
-            </div>
-            <div class="pricecard">
-              <h3>Brotback-Seminar</h3>
-              <p class="pricecard__price">82,– €</p>
-              <p class="pricecard__sub">pro Person · 4 Std.</p>
-            </div>
-            <div class="pricecard pricecard--accent">
-              <h3>Kindergeburtstag</h3>
-              <p class="pricecard__price">270 €</p>
-              <p class="pricecard__sub">5–8 Kinder · 2 Std.</p>
+          <div class="price-angebote">
+            <h3 class="price-col-title">Meine Angebote im Überblick</h3>
+            <div class="price-cards">
+              <div class="pricecard">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4"/><path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></svg>
+                <h3>Kochevents</h3>
+                <p class="pricecard__sub">Gesellige Kochabende für Erwachsene</p>
+              </div>
+              <div class="pricecard">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                <h3>Kinderkurse</h3>
+                <p class="pricecard__sub">Kochen &amp; Backen ab 5 Jahren</p>
+              </div>
+              <div class="pricecard">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+                <h3>Brotback-Seminare</h3>
+                <p class="pricecard__sub">Brot &amp; Kleingebäck – auch mit Sauerteig</p>
+              </div>
+              <div class="pricecard">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
+                <h3>Kindergeburtstage</h3>
+                <p class="pricecard__sub">Die Party der besonderen Art</p>
+              </div>
+              <div class="pricecard pricecard--kraeuter">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <h3>Naturkosmetik</h3>
+                <p class="pricecard__sub">Natürliche Pflege aus Kräutern</p>
+              </div>
+              <div class="pricecard pricecard--kraeuter">
+                <svg class="pricecard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h5v5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2z"/></svg>
+                <h3>Kräuter-Hausapotheke</h3>
+                <p class="pricecard__sub">Salben, Tees &amp; Tinkturen</p>
+              </div>
             </div>
           </div>
         </div>
         <p class="price-note">
-          Mobiler Service: Anfahrt im Umkreis inklusive – darüber hinaus auf Anfrage.
-          Exklusive Events ab 8 Personen jederzeit buchbar.<br />
-          Alle Preise sind Endpreise – als Kleinunternehmerin nach
-          § 19 UStG wird keine Umsatzsteuer ausgewiesen.
+          Preise &amp; Termine nenne ich dir gerne persönlich auf Anfrage – jeder Kurs
+          wird individuell geplant. Anfahrt im Umkreis inklusive, weitere Strecken auf
+          Anfrage. Exklusive Events ab 5 Personen jederzeit buchbar.<br />
+          Als Kleinunternehmerin nach § 19 UStG wird keine Umsatzsteuer ausgewiesen.
         </p>
         <div class="center">
           <a href="#kontakt" class="btn btn--primary">Jetzt Termin anfragen</a>
@@ -444,33 +468,27 @@
         <p class="section__eyebrow">Aktuelle Termine</p>
         <h2 class="section__title">Nächste Kurse</h2>
         <p class="section__lead">
-          Hier findest du die nächsten offenen Kurse. Die Termine werden laufend
-          aktualisiert – dein Wunschtermin ist nicht dabei? Alle Kurse sind auch
-          als privater Termin buchbar, einfach anfragen.
+          Alle aktuellen Kurse und Termine findest du gesammelt im Kursprogramm –
+          einfach als PDF herunterladen. Dein Wunschtermin ist nicht dabei?
+          Alle Kurse gibt es auch mobil bei dir zuhause oder als Wunschtermin
+          in der Seminarküche – frag einfach an.
         </p>
 
         <!-- ═══════════════════════════════════════════════════════════════
              ÄNDERN: TERMINE
-             Die Termine stehen jetzt in einer eigenen, einfachen Datei:
-                 assets/js/termine.js
-             Dort trägst du pro Termin EINE Zeile ein – ganz ohne HTML.
-             Die Anleitung steht in der Datei selbst und in
-             "Anleitung-Website-aendern.html" (Kapitel 3).
-             Hier in der index.html musst du für Termine NICHTS mehr ändern.
+             Zurzeit werden KEINE einzelnen Termin-Kacheln angezeigt – alle
+             Termine stehen gesammelt im Kursprogramm-PDF (Knopf unten).
+             Sollen wieder Termin-Kacheln auf der Seite erscheinen: einfach
+             in der Datei assets/js/termine.js Zeilen eintragen (EINE Zeile
+             pro Termin, ganz ohne HTML) – sie erscheinen dann automatisch
+             hier über dem PDF-Knopf. Anleitung dazu: in termine.js selbst
+             und in "Anleitung-Website-aendern.html" (Kapitel 3).
+             Hier in der index.html musst du für Termine NICHTS ändern.
              ═══════════════════════════════════════════════════════════════ -->
         <div class="termine">
           <!-- wird automatisch aus assets/js/termine.js aufgebaut -->
         </div>
-        <noscript>
-          <p class="termine__note">Zum Anzeigen der aktuellen Termine bitte
-          JavaScript aktivieren – oder lade unten das Kursprogramm als PDF
-          herunter bzw. frag deinen Wunschtermin direkt an.</p>
-        </noscript>
 
-        <p class="termine__note">
-          Kein passender Termin dabei? Alle Kurse gibt es auch mobil bei dir zu
-          Hause oder als Wunschtermin in der Seminarküche.
-        </p>
         <!-- Kursprogramm-PDF austauschen: neue PDF mit GENAU dem Namen
              SylviasGusto-Kursprogramm.pdf in den Ordner assets/docs hochladen –
              die alte Datei wird dabei automatisch ersetzt. -->
@@ -580,8 +598,9 @@
           </details>
           <details>
             <summary>Was brauche ich für einen mobilen Kurs?</summary>
-            <p>Nur eine ganz normale Küche und gute Laune. Zutaten, Rezepte und
-               alles, was wir sonst brauchen, bringe ich mit.</p>
+            <p>Nur eine ganz normale Küche und gute Laune. Alles, was wir
+               brauchen – Zutaten, Rezepte und Equipment – bringe ich nach
+               Rücksprache mit.</p>
           </details>
           <details>
             <summary>Brauche ich Vorkenntnisse?</summary>
@@ -589,7 +608,7 @@
                Chi-Chi, verständlich erklärt und für jedes Niveau geeignet.</p>
           </details>
           <details>
-            <summary>Was ist im Kurspreis enthalten?</summary>
+            <summary>Was ist im Kurs enthalten?</summary>
             <p>Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle
                Lebensmittelkosten und die Rezepte per Mail zum Nachkochen daheim.</p>
           </details>
@@ -601,11 +620,11 @@
           <details>
             <summary>Ab welchem Alter können Kinder teilnehmen?</summary>
             <p>Kinderkurse gibt es ab 5 Jahren. Kindergeburtstage sind für 5 bis 8
-               Kinder ausgelegt und dauern etwa 2 Stunden.</p>
+               Kinder ausgelegt.</p>
           </details>
           <details>
             <summary>Wie viele Personen können teilnehmen?</summary>
-            <p>In meiner Seminarküche maximal 8 Personen. Mobile Events sind ab 8
+            <p>In meiner Seminarküche maximal 8 Personen. Mobile Events sind ab 5
                Personen jederzeit exklusiv buchbar – bei Vereinen und größeren
                Gruppen stimmen wir die Größe individuell ab.</p>
           </details>
@@ -709,6 +728,8 @@
               <option>Kinderkurs</option>
               <option>Brotback-Seminar</option>
               <option>Kindergeburtstag</option>
+              <option>Naturkosmetik-Kurs</option>
+              <option>Kräuter-Hausapotheke</option>
               <option>Team-/Firmenevent</option>
               <option>Noch unsicher – bitte beraten</option>
             </select>
@@ -748,7 +769,7 @@
       <nav class="footer__links" aria-label="Footer">
         <a href="#willkommen">Willkommen</a>
         <a href="#angebot">Angebot</a>
-        <a href="#preise">Kurse &amp; Preise</a>
+        <a href="#preise">Leistungen</a>
         <a href="#termine">Termine</a>
         <a href="#faq">FAQ</a>
         <a href="#kontakt">Kontakt</a>

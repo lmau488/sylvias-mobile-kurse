@@ -20,12 +20,15 @@ Mit **Strg+F** nach diesen Stichwörtern suchen:
 
 | Suchwort | Was sich dort ändern lässt |
 |---|---|
-| **Termine** | stehen in einer eigenen, einfachen Datei: **`assets/js/termine.js`** – pro Termin eine Zeile, ganz ohne HTML |
-| `ÄNDERN: PREISE` | Preise anpassen (stehen an 3 Stellen) |
-| `ÄNDERN: ANGEBOTE` | Kurs-Karten: Texte, Dauer, Preise |
+| **Termine** | stehen in einer eigenen, einfachen Datei: **`assets/js/termine.js`** – pro Termin eine Zeile, ganz ohne HTML. Zurzeit sind keine eingetragen, die Seite verweist aufs Kursprogramm-PDF |
+| `ÄNDERN: ANGEBOTE` | Kurs-Karten: Texte |
+| `ÄNDERN: LEISTUNGEN` | Kacheln im grünen Bereich (Angebots-Überblick) |
 | `ÄNDERN: TELEFON` | Telefonnummer freischalten (2 Stellen) |
 | `ÄNDERN: KUNDENSTIMMEN` | Echte Zitate eintragen und Sektion einblenden |
 | `ÄNDERN: FAQ` | Fragen ergänzen oder anpassen |
+
+**Preise und Kursdauern stehen bewusst nicht auf der Website** – sie werden
+auf Anfrage genannt (Hinweis dazu steht im grünen Leistungs-Bereich).
 
 Die ausführliche Schritt-für-Schritt-Anleitung (mit Checkliste und
 „Rückgängig machen") liegt als `Anleitung-Website-aendern.html` im lokalen
