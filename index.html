@@ -110,6 +110,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kindergeburtstage" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Naturkosmetik-Kurse mit Kräutern" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kräuter-Hausapotheke: Salben, Tees und Tinkturen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ernährungskochkurse – gesund genießen (z. B. bei Endometriose, Diabetes, in den Wechseljahren)" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Vorträge für Vereine und Gruppen" } }
     ]
   }
@@ -124,7 +125,7 @@
       { "@type": "Question", "name": "Wo finden die Kochkurse von SylviasGusto statt?", "acceptedAnswer": { "@type": "Answer", "text": "Mobil bei dir zuhause, im Büro oder an deinem Wunschort – im Einsatzgebiet Wolnzach (Hallertau) mit rund 100 km Umkreis, z. B. Ingolstadt, Pfaffenhofen an der Ilm, Freising, München, Regensburg oder Landshut. Alternativ in der Seminarküche in kleiner Runde mit maximal 8 Personen." } },
       { "@type": "Question", "name": "Was brauche ich für einen mobilen Kochkurs?", "acceptedAnswer": { "@type": "Answer", "text": "Nur eine ganz normale Küche und gute Laune. Alles, was wir brauchen – Zutaten, Rezepte und Equipment – bringt Sylvia nach Rücksprache mit." } },
       { "@type": "Question", "name": "Brauche ich Vorkenntnisse?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Es werden alltagstaugliche Rezepte gemeinsam umgesetzt – verständlich erklärt und für jedes Niveau geeignet." } },
-      { "@type": "Question", "name": "Was ist im Kurs enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten und die Rezepte per Mail." } },
+      { "@type": "Question", "name": "Was ist im Kurs enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten und die Rezepte per Mail. Bei Kursen in der Seminarküche zusätzlich eine Leihschürze." } },
       { "@type": "Question", "name": "Wird auch mit Sauerteig gebacken?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, in den Brotback-Seminaren werden Brot und Kleingebäck gebacken – alltagstaugliche Rezepte, auch mit Sauerteig." } },
       { "@type": "Question", "name": "Ab welchem Alter können Kinder teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Kinderkurse ab 5 Jahren. Kindergeburtstage für 5 bis 8 Kinder." } },
       { "@type": "Question", "name": "Wie viele Personen können teilnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "In der Seminarküche maximal 8 Personen. Mobile Events sind ab 5 Personen exklusiv buchbar, größere Gruppen nach Absprache." } },
@@ -405,11 +406,11 @@
           <div class="price-list">
             <h3 class="price-col-title">In jedem Kurs enthalten</h3>
             <ul class="included">
-              <li>Leihschürze</li>
               <li>Willkommensgetränk</li>
               <li>Getränke (alkoholfrei)</li>
               <li>Alle Lebensmittelkosten</li>
               <li>Rezepte per Mail zum Download</li>
+              <li>Leihschürze bei Kursen in der Seminarküche</li>
               <li>Ein Event, das in Erinnerung bleibt</li>
             </ul>
           </div>
@@ -465,19 +466,21 @@
     <!-- ============================ TERMINE ============================ -->
     <section class="section" id="termine">
       <div class="container">
-        <p class="section__eyebrow">Aktuelle Termine</p>
-        <h2 class="section__title">Nächste Kurse</h2>
+        <p class="section__eyebrow">Kurse &amp; Termine</p>
+        <h2 class="section__title">Wähle dein Kocherlebnis</h2>
         <p class="section__lead">
-          Alle aktuellen Kurse und Termine findest du gesammelt im Kursprogramm –
-          einfach als PDF herunterladen. Dein Wunschtermin ist nicht dabei?
-          Alle Kurse gibt es auch mobil bei dir zuhause oder als Wunschtermin
-          in der Seminarküche – frag einfach an.
+          Im Kursprogramm findest du alle meine Kurse zur Auswahl – von der
+          gesunden Familienküche über die Wildkräuterkochschule bis zum
+          Ernährungskochkurs. Einfach als PDF herunterladen und dein
+          Kocherlebnis aussuchen: Alle Kurse und Termine gibt es auf Anfrage –
+          mobil bei dir zuhause oder in der Seminarküche in Wolnzach.
         </p>
 
         <!-- ═══════════════════════════════════════════════════════════════
              ÄNDERN: TERMINE
-             Zurzeit werden KEINE einzelnen Termin-Kacheln angezeigt – alle
-             Termine stehen gesammelt im Kursprogramm-PDF (Knopf unten).
+             Zurzeit werden KEINE einzelnen Termin-Kacheln angezeigt – im
+             Kursprogramm-PDF (Knopf unten) stehen die Kurse zur Auswahl,
+             Termine gibt es auf Anfrage.
              Sollen wieder Termin-Kacheln auf der Seite erscheinen: einfach
              in der Datei assets/js/termine.js Zeilen eintragen (EINE Zeile
              pro Termin, ganz ohne HTML) – sie erscheinen dann automatisch
@@ -609,8 +612,9 @@
           </details>
           <details>
             <summary>Was ist im Kurs enthalten?</summary>
-            <p>Leihschürze, Willkommensgetränk, alkoholfreie Getränke, alle
-               Lebensmittelkosten und die Rezepte per Mail zum Nachkochen daheim.</p>
+            <p>Willkommensgetränk, alkoholfreie Getränke, alle Lebensmittelkosten
+               und die Rezepte per Mail zum Nachkochen daheim. Bei Kursen in der
+               Seminarküche bekommst du zusätzlich eine Leihschürze.</p>
           </details>
           <details>
             <summary>Backen wir auch mit Sauerteig?</summary>
