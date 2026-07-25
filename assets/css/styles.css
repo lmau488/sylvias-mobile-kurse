@@ -222,12 +222,14 @@ a { color: var(--terracotta-dark); }
   .card--wide__cta { align-self: stretch; text-align: center; white-space: normal; }
 }
 
-/* ---------- Galerie (Beispielbilder) ---------- */
+/* ---------- Galerie (Beispielbilder) ----------
+   Aktuell nur EIN Bild – bei zwei oder mehr Bildern die max-width
+   unten wieder auf 720px erhöhen. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
-  max-width: 720px;
+  max-width: 400px;
   margin: 48px auto 0;
 }
 .gallery__item { margin: 0; }
@@ -253,18 +255,37 @@ a { color: var(--terracotta-dark); }
 .step h3 { font-family: var(--font-head); font-size: 1.25rem; margin: 0 0 8px; }
 .step p { color: var(--muted); margin: 0; }
 
-/* ---------- Preise ---------- */
+/* ---------- Leistungen & Angebote (grüner Bereich) ---------- */
+.section--green { position: relative; overflow: hidden; }
 .price-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: start; }
+.price-col-title { color: #fff; font-family: var(--font-head); font-size: 1.3rem; margin: 0 0 16px; }
 .included { list-style: none; margin: 0; padding: 0; }
 .included li { color: #fff; padding: 11px 0 11px 34px; position: relative; border-bottom: 1px solid rgba(255,255,255,.18); font-size: 1.05rem; }
 .included li::before { content: "✓"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #ffd9a8; color: var(--olive-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
 .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .pricecard { background: var(--cream); border-radius: var(--radius); padding: 22px; text-align: center; }
 .pricecard h3 { font-family: var(--font-head); margin: 0 0 6px; font-size: 1.15rem; }
-.pricecard__price { font-family: var(--font-head); font-size: 1.9rem; font-weight: 700; color: var(--terracotta); margin: 0; }
+.pricecard__icon { width: 28px; height: 28px; color: var(--terracotta); margin: 0 auto 10px; display: block; }
+.pricecard__price { font-family: var(--font-head); font-size: 1.9rem; font-weight: 700; color: var(--terracotta); margin: 0; } /* aktuell ungenutzt – Design für evtl. spätere Preisangaben */
 .pricecard__sub { color: var(--muted); font-size: .85rem; margin: 4px 0 0; }
 .pricecard--accent { background: #ffd9a8; }
+.pricecard--kraeuter { background: var(--sage); }
+.pricecard--kraeuter .pricecard__icon { color: var(--olive); }
 .price-note { color: #fff; text-align: center; max-width: 680px; margin: 32px auto 28px; opacity: .92; }
+
+/* Dekorativer Kräuterzweig rechts im grünen Bereich (nur große Bildschirme) */
+.preise-deco {
+  position: absolute;
+  top: 18px;
+  right: clamp(10px, 3vw, 60px);
+  width: clamp(140px, 15vw, 215px);
+  height: auto;
+  color: #ffd9a8;
+  opacity: .3;
+  transform: rotate(14deg);
+  pointer-events: none;
+}
+@media (max-width: 1150px) { .preise-deco { display: none; } }
 
 /* ---------- Termine ---------- */
 .termine { display: flex; flex-direction: column; gap: 18px; max-width: 860px; margin: 0 auto; }
@@ -432,6 +453,7 @@ a { color: var(--terracotta-dark); }
 
 @media (max-width: 860px) {
   .price-grid, .about, .contact { grid-template-columns: 1fr; }
+  .price-col-title { text-align: center; }
   .about__photo { max-width: 380px; margin: 0 auto; }
   .about__text .section__eyebrow, .about__text .section__title { text-align: center; }
   .contact__info .section__eyebrow, .contact__info .section__title { text-align: center; }
