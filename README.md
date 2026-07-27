@@ -3,7 +3,7 @@
 Statische Website (reines HTML/CSS/JS – kein Server, keine Datenbank, keine
 Plugins) für **SylviasGusto: mobile Koch- & Backkurse** in Wolnzach (Hallertau).
 
-Live: **https://lmau488.github.io/sylvias-mobile-kurse/**
+Live: **https://sylviasgusto.de/**
 
 ---
 

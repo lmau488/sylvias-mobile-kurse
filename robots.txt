@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lmau488.github.io/sylvias-mobile-kurse/sitemap.xml
+Sitemap: https://sylviasgusto.de/sitemap.xml
