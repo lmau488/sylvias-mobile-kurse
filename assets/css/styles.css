@@ -517,3 +517,96 @@ a { color: var(--terracotta-dark); }
 @media (orientation: landscape) and (max-height: 540px) {
   .hero { padding: 56px 0 48px; }
 }
+
+
+/* =====================================================================
+   UNTERSEITEN (Themen- und Ortsseiten für Google & KI-Suche)
+   ===================================================================== */
+.pagehero {
+  background:
+    linear-gradient(rgba(91,107,63,.80), rgba(51,41,31,.86)),
+    url("../img/hero-koch.webp") center 30%/cover no-repeat,
+    var(--olive-dark);
+  color: #fff;
+  padding: 66px 0 74px;
+  text-align: center;
+}
+.pagehero__eyebrow { text-transform: uppercase; letter-spacing: .2em; font-weight: 700; font-size: .78rem; opacity: .9; margin: 0 0 12px; }
+.pagehero h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 3.1rem); line-height: 1.08; margin: 0 0 18px; }
+.pagehero__lead { max-width: 690px; margin: 0 auto 28px; font-size: 1.08rem; opacity: .96; }
+.pagehero__actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.breadcrumb { background: var(--cream); font-size: .86rem; border-bottom: 1px solid rgba(51,41,31,.06); }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 12px 0; color: var(--muted); }
+.breadcrumb a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.breadcrumb a:hover { color: var(--terracotta); text-decoration: underline; }
+.breadcrumb li + li::before { content: "\203A"; margin-right: 8px; opacity: .55; }
+
+.prose { max-width: 760px; margin: 0 auto; }
+.prose p { margin: 0 0 18px; font-size: 1.04rem; }
+.prose h2 { font-family: var(--font-head); font-size: clamp(1.5rem, 3vw, 2rem); margin: 38px 0 14px; line-height: 1.15; }
+.prose h3 { font-family: var(--font-head); font-size: 1.24rem; margin: 26px 0 8px; }
+.prose ul { margin: 0 0 18px; padding-left: 22px; }
+.prose li { margin-bottom: 8px; }
+.prose a { color: var(--terracotta); font-weight: 600; }
+
+.facts {
+  max-width: 830px; margin: 0 auto; background: var(--white); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 26px 30px; display: grid;
+  grid-template-columns: minmax(150px, auto) 1fr; gap: 12px 28px; border: 1px solid rgba(51,41,31,.05);
+}
+.facts dt { font-weight: 700; color: var(--olive); }
+.facts dd { margin: 0; }
+
+.linkgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(228px, 1fr)); gap: 16px; }
+.linkcard {
+  display: block; background: var(--white); border-radius: var(--radius); padding: 20px 22px;
+  box-shadow: var(--shadow); text-decoration: none; color: var(--ink);
+  border: 1px solid rgba(51,41,31,.05); transition: transform .18s ease;
+}
+.linkcard:hover { transform: translateY(-4px); }
+.linkcard strong { display: block; font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 4px; color: var(--terracotta); }
+.linkcard span { font-size: .9rem; color: var(--muted); display: block; }
+
+.ctabox { text-align: center; }
+.ctabox > p { color: #f3ead8; max-width: 620px; margin: 0 auto 24px; }
+
+.footer__head { display: block; font-family: var(--font-head); color: #fff; font-size: 1.02rem; margin-bottom: 4px; }
+
+.orte-links { margin-top: 34px; }
+
+@media (max-width: 620px) {
+  .facts { grid-template-columns: 1fr; gap: 2px 0; padding: 22px 20px; }
+  .facts dd { margin-bottom: 14px; }
+  .pagehero { padding: 52px 0 58px; }
+}
+
+/* Korrektur: Auf schmalen Handys ließ sich die Seite seitlich verschieben,
+   weil das Kontaktformular breiter wurde als der Bildschirm. */
+.contact > * { min-width: 0; }
+.contact__form, .field input, .field select, .field textarea { max-width: 100%; }
+.consent > span { min-width: 0; }
+
+/* Korrektur: Zwischen ca. 861 und 1180 px war die Navigation breiter als der
+   Bildschirm (9 Menüpunkte). Abstände in diesem Bereich etwas enger. */
+@media (min-width: 861px) and (max-width: 1180px) {
+  .nav__links { gap: 15px; font-size: .95rem; }
+  .nav__cta { padding: 8px 14px; }
+}
+
+/* Korrektur: Auf kleinen Tablets (861–980 px) passten die 9 Menüpunkte nicht
+   nebeneinander – dort wird jetzt ebenfalls das Klapp-Menü verwendet. */
+@media (min-width: 861px) and (max-width: 980px) {
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; align-items: stretch;
+    background: var(--cream); box-shadow: var(--shadow);
+    max-height: 0; overflow: hidden; transition: max-height .35s ease;
+    z-index: 100;
+  }
+  .nav__links.open { max-height: 640px; }
+  .nav__links li { border-top: 1px solid rgba(51,41,31,.08); }
+  .nav__links a { display: block; padding: 16px 24px; }
+  .nav__cta { border-radius: 0; margin: 0; display: block; text-align: center; padding: 16px 24px; }
+}
