@@ -58,16 +58,22 @@ passende Seite gibt. Eine einzige Seite kann nicht gleichzeitig für
 | `kraeuterkurse-naturkosmetik.html` | Kräuterkurse, Naturkosmetik, Hausapotheke |
 | `ernaehrungskochkurs.html` | Ernährungskochkurse „Gesund genießen" |
 | `firmenevent-vereine-kochkurs.html` | Vereine, Gruppen & Firmen |
+| `kochkurs-verschenken.html` | Kochkurs verschenken (Geschenkidee) |
 
 **Ortsseiten**
 
 | Datei | Ort / Region |
 |---|---|
+| `einsatzgebiet.html` | Übersichtsseite „Kochkurs in deiner Nähe" – alle Orte und Landkreise |
 | `kochkurs-wolnzach-hallertau.html` | Wolnzach & Hallertau |
 | `kochkurs-ingolstadt.html` | Ingolstadt |
 | `kochkurs-pfaffenhofen.html` | Pfaffenhofen an der Ilm |
 | `kochkurs-freising.html` | Freising |
 | `kochkurs-landshut.html` | Landshut |
+| `kochkurs-geisenfeld.html` | Geisenfeld |
+| `kochkurs-au-hallertau.html` | Au in der Hallertau |
+| `kochkurs-mainburg.html` | Mainburg |
+| `kochkurs-manching.html` | Manching |
 
 Alle Unterseiten sind gleich aufgebaut (Kopfzeile → Titelbereich → Text →
 „Auf einen Blick" → Inhalte → Fragen & Antworten → Anfrage-Kasten → Fußzeile)
@@ -95,7 +101,7 @@ alte Version öffnen und den Inhalt zurückkopieren (Details in der Anleitung).
 
 ```
 index.html          Startseite
-mobiler-kochkurs.html … 12 Unterseiten zu Kursen und Orten (siehe Tabelle oben)
+mobiler-kochkurs.html … 18 Unterseiten zu Kursen und Orten (siehe Tabellen oben)
 impressum.html      Impressum
 datenschutz.html    Datenschutzerklärung
 404.html            Seite für „Adresse gibt es nicht" (zeigt GitHub Pages automatisch)

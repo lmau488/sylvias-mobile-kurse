@@ -610,3 +610,18 @@ a { color: var(--terracotta-dark); }
   .nav__links a { display: block; padding: 16px 24px; }
   .nav__cta { border-radius: 0; margin: 0; display: block; text-align: center; padding: 16px 24px; }
 }
+
+
+/* Einsatzgebiet-Seite: Regionen-Blöcke */
+.regions { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.region { background: var(--white); border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--shadow); border: 1px solid rgba(51,41,31,.05); }
+.region h3 { margin-top: 0; }
+.region .chips { margin-bottom: 0; }
+
+/* Sehr schmale Handys (ab 320 px): lange Wörter umbrechen statt überstehen */
+.facts dt, .facts dd, .prose p, .prose li, .prose h2, .prose h3,
+.linkcard strong, .linkcard span, .card p, .card__title, .pagehero h1 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.cards > *, .price-cards > *, .linkgrid > *, .steps > *, .regions > * { min-width: 0; }
