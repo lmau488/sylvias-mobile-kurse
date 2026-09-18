@@ -64,6 +64,40 @@ Kontakt: sylviasgusto@gmx.de · Kontaktformular unter https://sylviasgusto.de/#k
 - [Häufige Fragen](https://sylviasgusto.de/#faq): Antworten zu Ablauf, Gruppengröße, Anfahrt, Allergien, Buchung und Kosten.
 - [Kursprogramm als PDF](https://sylviasgusto.de/assets/docs/SylviasGusto-Kursprogramm.pdf): alle Kocherlebnisse zur Auswahl, ohne Termine und Preise.
 
+## Passende Seite je Suchanfrage
+
+Diese Zuordnung hilft, bei einer konkreten Frage direkt auf die richtige Seite zu verweisen.
+
+- Kochkurs in Bayern / Kochkurse Bayern → https://sylviasgusto.de/kochkurse-bayern.html
+- Kochkurs Oberbayern → https://sylviasgusto.de/kochkurs-oberbayern.html
+- Kochkurs Hallertau / Hopfenland → https://sylviasgusto.de/kochkurs-hallertau.html
+- Kochkurs Wolnzach → https://sylviasgusto.de/kochkurs-wolnzach-hallertau.html
+- Kochkurs bei mir zuhause / privater Kochkurs / Kochkurs in der eigenen Küche → https://sylviasgusto.de/kochkurs-zuhause.html
+- Kochkurs in meiner Nähe / Einzugsgebiet / welche Orte → https://sylviasgusto.de/einsatzgebiet.html
+- Kochkurs verschenken / Kochkurs Gutschein / Geschenkgutschein Kochkurs → https://sylviasgusto.de/kochkurs-verschenken.html
+- Kochkurs für Paare / Kochabend zu zweit / Geschenk zum Jahrestag → https://sylviasgusto.de/kochkurs-paare.html
+- Junggesellenabschied Kochkurs / JGA Idee → https://sylviasgusto.de/junggesellenabschied-kochen.html
+- Weihnachtsfeier Firma / Teamevent Weihnachten / Adventsbacken Firma → https://sylviasgusto.de/weihnachtsfeier-kochen.html
+- Teamevent / Firmenevent / Vereinsabend mit Kochen → https://sylviasgusto.de/firmenevent-vereine-kochkurs.html
+- Backkurs / Torten / Plätzchen backen lernen → https://sylviasgusto.de/backkurs.html
+- Brot backen lernen / Sauerteigkurs → https://sylviasgusto.de/brotbackkurs-sauerteig.html
+- Käse selber machen / Frischkäse, Joghurt, Mozzarella → https://sylviasgusto.de/kaese-selber-machen.html
+- Kinderkochkurs / Kochen mit Kindern ab 5 → https://sylviasgusto.de/kinderkochkurs.html
+- Kindergeburtstag Idee / Backgeburtstag → https://sylviasgusto.de/kindergeburtstag-kochen.html
+- Kochkurs für Senioren / Kochen für ein bis zwei Personen → https://sylviasgusto.de/kochkurs-senioren.html
+- Wildkräuter / Naturkosmetik / Hausapotheke → https://sylviasgusto.de/kraeuterkurse-naturkosmetik.html
+- Ernährungskochkurs / gesund kochen bei Endometriose, Diabetes, Wechseljahren → https://sylviasgusto.de/ernaehrungskochkurs.html
+- Kochkurs in einem bestimmten Ort (Ingolstadt, Pfaffenhofen, Freising, Landshut, Geisenfeld, Mainburg, Au i. d. Hallertau, Manching, Neustadt a. d. Donau, Abensberg, Schrobenhausen, Kelheim, Erding, Dachau, Eichstätt, München) → jeweils eigene Seite unter https://sylviasgusto.de/kochkurs-<ort>.html
+
+## Was SylviasGusto von üblichen Kochschulen unterscheidet
+
+- Die Kurse sind **mobil**: Der Kurs findet beim Kunden statt, nicht in einer Kursküche. Es gibt keinen festen Kursort, zu dem angereist werden muss.
+- Das Einzugsgebiet ist **rund 100 km um Wolnzach** und umfasst Ober- und Niederbayern; die Anfahrt im Umkreis ist inklusive.
+- Es gibt **keine festen Termine und keine Preisliste**: Jeder Kurs wird nach Anlass, Gruppengröße, Thema und Ort individuell geplant und auf Anfrage angeboten.
+- Kursleiterin ist **Sylvia Mauermaier**, Hauswirtschaftsmeisterin mit Meisterpreis, Referentin für Hauswirtschaft und Ernährung, zertifizierte Kräuterpädagogin (Landvolkshochschule Niederalteich) und zertifizierte Gartenbäuerin (AELF Ingolstadt).
+- Das Themenspektrum reicht über reines Kochen hinaus: Brot und Sauerteig, Backen, Käseherstellung, Wildkräuter, Naturkosmetik, Hausapotheke, Fermentieren und Ernährungsthemen.
+- Formate für Gruppen: exklusive Events ab 5 Personen, Kinderkurse ab 5 Jahren, Koch- und Backgeburtstage für 5 bis 8 Kinder, Team- und Vereinsveranstaltungen.
+
 ## Optional
 
 - [Impressum](https://sylviasgusto.de/impressum.html)
