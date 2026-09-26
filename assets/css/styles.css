@@ -350,6 +350,9 @@ a { color: var(--terracotta-dark); }
 .quote { background: var(--white); border-radius: var(--radius); padding: 28px; margin: 0; box-shadow: var(--shadow); border-left: 5px solid var(--terracotta); }
 .quote p { margin: 0 0 14px; font-style: italic; }
 .quote cite { color: var(--muted); font-style: normal; font-weight: 700; font-size: .9rem; }
+.quote__src { display: inline-flex; align-items: center; gap: 5px; margin-left: 6px; color: var(--terracotta); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.quote__src:hover { text-decoration: underline; }
+.quote__src .icon { width: 15px; height: 15px; }
 
 /* ---------- FAQ (Akkordeon) ---------- */
 .faq { max-width: 780px; margin: 0 auto; }
