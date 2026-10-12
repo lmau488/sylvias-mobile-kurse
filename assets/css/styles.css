@@ -262,6 +262,9 @@ a { color: var(--terracotta-dark); }
 .included { list-style: none; margin: 0; padding: 0; }
 .included li { color: #fff; padding: 11px 0 11px 34px; position: relative; border-bottom: 1px solid rgba(255,255,255,.18); font-size: 1.05rem; }
 .included li::before { content: "✓"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; background: #ffd9a8; color: var(--olive-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
+/* Auf hellem Salbei-Hintergrund (Kursseiten): dunkle Schrift statt weiß */
+.section--sage .included li { color: var(--ink); border-bottom-color: rgba(51, 41, 31, .14); }
+.section--sage .included li::before { background: var(--olive); color: #fff; }
 .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .pricecard { background: var(--cream); border-radius: var(--radius); padding: 22px; text-align: center; }
 .pricecard h3 { font-family: var(--font-head); margin: 0 0 6px; font-size: 1.15rem; }
