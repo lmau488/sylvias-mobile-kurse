@@ -12,7 +12,7 @@
      Tag | Monat | Titel | Uhrzeit | Ort | Plätze | Status
 
    Beispiel:
-     26 | Sep | Brotback-Seminar | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 8 Personen | frei
+     26 | Sep | Brotback-Seminar | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 6 Personen | frei
 
    Hinweise zu den Feldern:
      • Monat  = 3 Buchstaben:  Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez
@@ -40,5 +40,5 @@
 // als Kacheln auf der Website.
 window.TERMINE = `
 # So sieht eine Termin-Zeile aus – zum Aktivieren das # am Anfang weglassen:
-# 26 | Sep | Brotback-Seminar | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 8 Personen | frei
+# 26 | Sep | Brotback-Seminar | 10:00–14:00 Uhr | Seminarküche Wolnzach | max. 6 Personen | frei
 `;
