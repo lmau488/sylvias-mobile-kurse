@@ -349,7 +349,8 @@ a { color: var(--terracotta-dark); }
 }
 
 /* ---------- Kundenstimmen ---------- */
-.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: start; }
+.quotes { columns: 3 260px; column-gap: 24px; }
+.quotes > .quote { break-inside: avoid; margin-bottom: 24px; display: block; }
 .quote { background: var(--white); border-radius: var(--radius); padding: 28px; margin: 0; box-shadow: var(--shadow); border-left: 5px solid var(--terracotta); }
 .quote p { margin: 0 0 14px; font-style: italic; }
 .quote cite { color: var(--muted); font-style: normal; font-weight: 700; font-size: .9rem; }
