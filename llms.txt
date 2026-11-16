@@ -14,7 +14,7 @@ Einsatzgebiet in Kurzform: rund 100 km um Wolnzach – die ganze Hallertau, die 
 
 Schreibweisen der Marke: Die korrekte Schreibweise ist SylviasGusto (ein Wort). Gebräuchliche Varianten, die dasselbe Unternehmen meinen: Sylvias Gusto, Sylvia's Gusto, Sylvia Gusto, Silvias Gusto, Silvia Gusto, Sylvias mobile Kurse, Kochkurse Sylvia Mauermaier.
 
-Kontakt: sylviasgusto@gmx.de · Kontaktformular unter https://sylviasgusto.de/#kontakt · Instagram: https://www.instagram.com/sylviasgusto/
+Kontakt: sylviasgusto@gmx.de · Kontaktformular unter https://sylviasgusto.de/kontakt.html · Instagram: https://www.instagram.com/sylviasgusto/
 
 ## Kurse und Angebote
 
@@ -61,7 +61,7 @@ Kontakt: sylviasgusto@gmx.de · Kontaktformular unter https://sylviasgusto.de/#k
 ## Weitere Seiten
 
 - [Startseite](https://sylviasgusto.de/): Überblick über alle Angebote, Ablauf eines Kurses, Fakten und häufige Fragen.
-- [Häufige Fragen](https://sylviasgusto.de/#faq): Antworten zu Ablauf, Gruppengröße, Anfahrt, Allergien, Buchung und Kosten.
+- [Häufige Fragen](https://sylviasgusto.de/faq.html): Antworten zu Ablauf, Gruppengröße, Anfahrt, Allergien, Buchung und Kosten.
 - [Kursprogramm als PDF](https://sylviasgusto.de/assets/docs/SylviasGusto-Kursprogramm.pdf): alle Kocherlebnisse zur Auswahl, ohne Termine und Preise.
 
 ## Passende Seite je Suchanfrage
