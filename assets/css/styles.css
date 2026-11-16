@@ -152,6 +152,8 @@ a { color: var(--terracotta-dark); }
 .nav__links { list-style: none; display: flex; gap: 26px; margin: 0; padding: 0; align-items: center; }
 .nav__links a { text-decoration: none; color: var(--ink); font-weight: 600; }
 .nav__links a:hover { color: var(--terracotta); }
+.nav__links a[aria-current="page"]:not(.nav__cta) { color: var(--terracotta); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.nav__cta[aria-current="page"] { background: var(--terracotta-dark); }
 .nav__cta { background: var(--terracotta); color: #fff !important; padding: 9px 20px; border-radius: 999px; }
 .nav__cta:hover { background: var(--terracotta-dark); }
 
