@@ -110,7 +110,7 @@ function showStatus(msg, type) {
         '</div>' +
         '<div class="termin__side">' +
           '<span class="termin__status ' + st.cls + '">' + st.txt + '</span>' +
-          '<a href="#kontakt" class="btn btn--primary termin__cta">Platz anfragen</a>' +
+          '<a href="kontakt.html" class="btn btn--primary termin__cta">Platz anfragen</a>' +
         '</div>' +
       '</article>'
     );
