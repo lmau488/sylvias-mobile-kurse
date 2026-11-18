@@ -635,3 +635,37 @@ a { color: var(--terracotta-dark); }
   hyphens: auto;
 }
 .cards > *, .price-cards > *, .linkgrid > *, .steps > *, .regions > * { min-width: 0; }
+
+/* =====================================================================
+   KURSPROGRAMM-DOWNLOAD (18.11.2026)
+   ===================================================================== */
+/* Knopf "Kursprogramm als PDF" im dunklen Seitenkopf: hell und gut sichtbar */
+.pagehero .btn--ghost { background: #fff; color: var(--ink); border-color: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.25); }
+.pagehero .btn--ghost:hover { background: var(--cream); color: var(--terracotta-dark, #a04e2e); border-color: var(--cream); }
+.btn--pdf .icon, .dlbox__btn .icon { width: 18px; height: 18px; vertical-align: -0.24em; margin-right: 6px; }
+.pagehero .btn--pdf .icon { color: var(--terracotta); }
+
+/* Download-Box oben auf "Angebot & Leistungen" */
+.dlbox {
+  display: flex; align-items: center; gap: 24px;
+  max-width: 900px; margin: 0 auto 44px;
+  background: #fff; border: 2px solid var(--terracotta);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 24px 28px;
+}
+.dlbox__icon {
+  flex: 0 0 auto; width: 64px; height: 64px; padding: 14px;
+  color: #fff; background: var(--terracotta); border-radius: 50%;
+}
+.dlbox__body { flex: 1 1 auto; min-width: 0; }
+.dlbox__title { font-family: var(--font-head); font-size: 1.35rem; margin: 0 0 4px; color: var(--ink); }
+.dlbox__body p { margin: 0; }
+.dlbox__insta { margin-top: 8px !important; font-size: .92rem; }
+.dlbox__insta a { color: var(--terracotta-dark, #a04e2e); font-weight: 700; text-decoration: none; }
+.dlbox__insta a:hover { text-decoration: underline; }
+.dlbox__insta .icon { margin-right: 4px; }
+.dlbox__btn { flex: 0 0 auto; white-space: nowrap; }
+@media (max-width: 720px) {
+  .dlbox { flex-direction: column; text-align: center; gap: 14px; padding: 24px 20px; }
+  .dlbox__btn { white-space: normal; width: 100%; text-align: center; }
+}
