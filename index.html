@@ -13,13 +13,13 @@
      Suchfunktion (Strg+F) über diese Stichwörter:
 
        Seit 16.11.2026 hat jeder Menüpunkt eine EIGENE Datei:
-         angebot.html, leistungen.html, termine.html, ablauf.html,
+         angebot.html, termine.html, ablauf.html,
          kraeuter.html, ueber-mich.html, faq.html, kontakt.html
        Dort stehen die folgenden Stellen:
        ÄNDERN: TERMINE        → Termine stehen in der Datei assets/js/termine.js
                                 (eigene, einfache Liste – dort eine Zeile pro Termin)
        ÄNDERN: ANGEBOTE       → Kurs-Karten (Texte)            → angebot.html
-       ÄNDERN: LEISTUNGEN     → Kacheln im grünen Bereich      → leistungen.html
+       ÄNDERN: LEISTUNGEN     → Kacheln im grünen Bereich      → angebot.html
        ÄNDERN: TELEFON        → Telefonnummer freischalten     → index.html (oben) + kontakt.html
        ÄNDERN: FAQ            → Fragen ergänzen oder anpassen  → faq.html
        In dieser Datei (index.html):
@@ -529,7 +529,6 @@
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html" aria-current="page">Startseite</a></li>
         <li><a href="angebot.html">Angebot</a></li>
-        <li><a href="leistungen.html">Leistungen</a></li>
         <li><a href="termine.html">Termine</a></li>
         <li><a href="ablauf.html">Ablauf</a></li>
         <li><a href="kraeuter.html">Kräuter</a></li>
@@ -556,7 +555,7 @@
           Rest kümmere ich mich.
         </p>
         <div class="hero__actions">
-          <a href="leistungen.html" class="btn btn--primary">Kurse entdecken</a>
+          <a href="angebot.html" class="btn btn--primary">Kurse entdecken</a>
           <a href="kontakt.html" class="btn btn--ghost">Termin anfragen</a>
         </div>
         <ul class="hero__badges">
@@ -576,8 +575,8 @@
         <p class="section__eyebrow">Entdecke SylviasGusto</p>
         <h2 class="section__title">Alles auf einen Klick</h2>
         <div class="linkgrid">
-          <a class="linkcard" href="angebot.html"><strong>Angebot</strong><span>Alle Kurse und Kocherlebnisse im Überblick</span></a>
-          <a class="linkcard" href="leistungen.html"><strong>Leistungen</strong><span>Was bei jedem Kurs dabei ist</span></a>
+          <a class="linkcard" href="angebot.html"><strong>Angebot &amp; Leistungen</strong><span>Alle Kurse – und was bei jedem Kurs dabei ist</span></a>
+          <a class="linkcard" href="assets/docs/SylviasGusto-Kursprogramm.pdf" download><strong>Kursprogramm (PDF)</strong><span>Alle Kocherlebnisse zum Herunterladen</span></a>
           <a class="linkcard" href="termine.html"><strong>Termine</strong><span>Wähle dein Kocherlebnis</span></a>
           <a class="linkcard" href="ablauf.html"><strong>Ablauf</strong><span>So läuft ein Kurs ab</span></a>
           <a class="linkcard" href="kraeuter.html"><strong>Kräuter</strong><span>Wildkräuter, Salben, Tees &amp; Tinkturen</span></a>
@@ -839,7 +838,6 @@
       <nav class="footer__links" aria-label="Footer">
         <strong class="footer__head">Website</strong>
         <a href="angebot.html">Angebot</a>
-        <a href="leistungen.html">Leistungen</a>
         <a href="termine.html">Termine</a>
         <a href="ablauf.html">Ablauf</a>
         <a href="kraeuter.html">Kräuter</a>
